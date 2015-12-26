@@ -23,8 +23,8 @@ $(document).ready(function(){
 	var content = document.getElementById('content');
 	content.style.top = headerHeight+'px';
 	
-	var footer = document.getElementById('footer');
-	footer.style.top = headerHeight+'px';
+	// var footer = document.getElementById('footer');
+	// footer.style.top = headerHeight+'px';
 
 
 
