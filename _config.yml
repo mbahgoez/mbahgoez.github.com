@@ -9,7 +9,7 @@
 title: BagusMantonafi
 email: bagus.manto1@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  mbahgoez informasi Pemograman pemograman Web dan Mobile.
+  mbahgoez informasi Pemograman utamanya Web dan Mobile. berawal dari sang admin yang orangnya selalu lupa-lupa, dan mencoba membuat blognya sendiri
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://mbahgoez.github.io" # the base hostname & protocol for your site
 facebook_username: mbah.goezt
