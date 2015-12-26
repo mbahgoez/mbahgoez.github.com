@@ -1,0 +1,21 @@
+<div class="tags">
+	<h1>
+		<i class="icon ion-pin"></i> 
+		Tags
+	</h1>
+
+	<div class="tagged">
+		<ul>
+			{% for category in site.categories %}
+            <li>
+                <a href="/categories/{{category | first}}">
+                	{{category | first}}
+                	<span class="badge">
+                    	{{category | size}}
+                	</span>
+            	</a>
+            </li>
+            {% endfor %}
+		</ul>
+	</div><!-- tagged -->
+</div><!-- tags -->

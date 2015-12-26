@@ -1,0 +1,135 @@
+---
+layout: default
+---
+
+
+<div class="background-image" id="back">
+  <h1>
+  Ilmu itu harus dimengerti bukan dihafal</h1>
+  <h3> 
+    - By Bagus Mantonafi -
+  </h3>
+</div>
+
+<!-- adding documentation -->
+
+
+<div class="content" id="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">  
+        <ul class="listed">
+
+        {% for post in site.posts %}
+          <li>
+            <div class="post-card">
+
+            <div class="image-post">
+              {% if post.image %}
+              <img class="img-fit" src="img/java_linux.jpg" alt="">
+              {% endif %}
+            </div>
+
+              <h2>
+                {{ post.title }}
+              </h2>
+
+              <p class="meta-author">
+                <i class="icon ion-calendar"></i>
+                
+                {{ post.date | date: "%b %-d, %Y" }}
+
+                <span>|</span>
+
+                {% if post.author %}
+                <a href="#">
+                  {{post.author}}
+                </a>
+                <span>|</span>
+                {% endif %}
+
+                {{ post.categories }}
+              |
+
+              <div class="estimate">
+
+
+{% capture words %}
+  {{ page.content | number_of_words | minus: 180 }}
+{% endcapture %}
+{% unless words contains "-" %}
+  {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
+{% endunless %}
+
+</div>
+
+
+              </p>
+
+              {{ post.content}}
+
+              <a 
+              class="readmore" 
+              href="{{ post.url | prepend: site.baseUrl }}">
+                Read More
+              </a>
+            </div>
+          </li>
+        
+        {% endfor %}
+
+
+        </ul>
+      </div><!-- col-8 -->
+
+      <div class="col-lg-4">
+       {% include sidebar_tags.html %}
+
+        <div class="categories">
+          <h1>
+            <i class="icon ion-ios-paper-outline"></i>
+            Categories
+          </h1>
+
+          <ul>
+            <li>
+              <a href="#">
+                Linux     
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                NodeJS
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Ionic
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                AngularJS
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                MonggoDB
+              </a>
+            </li>
+          </ul>
+        </div><!-- categories -->
+
+
+    {% include related_posts.html %}
+
+
+      </div><!-- col -4 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- content -->
+
+

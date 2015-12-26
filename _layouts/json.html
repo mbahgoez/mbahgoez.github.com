@@ -1,0 +1,13 @@
+[
+  {% for item in site.posts %}
+    {
+      "title": "{{ item.title | xml_escape }}",
+      "tanggal": "{{ item.date | xml_escape }}",
+      "penulis": "{{ item.author | xml_escape }}",
+      "kategori": "{{item.categories}}",
+      "estimated": "",
+      "permalink": "{{site.baseUrl}} {{item.url | prepend: site.baseUrl }}"
+    }
+    {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
