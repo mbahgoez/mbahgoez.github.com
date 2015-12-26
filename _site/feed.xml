@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BagusMantonafi</title>
-    <description>mbahgoez informasi Pemograman pemograman Web dan Mobile.
+    <description>mbahgoez informasi Pemograman utamanya Web dan Mobile. berawal dari sang admin yang orangnya selalu lupa-lupa, dan mencoba membuat blognya sendiri
 </description>
     <link>http://mbahgoez.github.io/</link>
     <atom:link href="http://mbahgoez.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Dec 2015 19:37:42 +0800</pubDate>
-    <lastBuildDate>Sat, 26 Dec 2015 19:37:42 +0800</lastBuildDate>
+    <pubDate>Sat, 26 Dec 2015 19:51:47 +0800</pubDate>
+    <lastBuildDate>Sat, 26 Dec 2015 19:51:47 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
