@@ -227,7 +227,7 @@ header {
                     padding:5px 15px;
                     font-family: 'raleway';
                     font-size:16px;
-                    font-weight: lighter;
+                    font-weight: 500;
                     color:$biru;
                     letter-spacing: 2px;
 
@@ -272,12 +272,15 @@ div.background-image {
         padding: 0px;
         margin: 0px;
         padding-top:130px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 30px;
         font-size: 60px;
         left:0;
         color:#fff;
         text-align: center;
         font-family: 'raleway';
-        font-weight: 100;
+        font-weight: 500;
         text-transform: uppercase;
 
         @include phone {
@@ -369,7 +372,7 @@ div.content {
                 color:#666;
                 line-height: 150%;
                 font-size: 18px;
-                font-weight: 100;
+                font-weight: 500;
 
                 @include phone {
                     font-size: 14px;

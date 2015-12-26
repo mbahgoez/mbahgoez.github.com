@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BagusMantonafi</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <description>mbahgoez informasi Pemograman pemograman Web dan Mobile.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Dec 2015 16:54:46 +0800</pubDate>
-    <lastBuildDate>Sat, 26 Dec 2015 16:54:46 +0800</lastBuildDate>
+    <link>http://mbahgoez.github.io/</link>
+    <atom:link href="http://mbahgoez.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 26 Dec 2015 19:37:42 +0800</pubDate>
+    <lastBuildDate>Sat, 26 Dec 2015 19:37:42 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Sun, 20 Dec 2015 20:09:25 +0800</pubDate>
-        <link>http://localhost:4000/blog/2015/12/20/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2015/12/20/welcome-to-jekyll/</guid>
+        <link>http://mbahgoez.github.io/blog/2015/12/20/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2015/12/20/welcome-to-jekyll/</guid>
         
         
         <category>jekyll</category>
@@ -43,8 +43,8 @@
         <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum itaque reiciendis, dicta sequi amet veniam alias libero voluptatem eveniet cumque? Adipisci ut dignissimos, provident nemo iste dolores blanditiis ducimus labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eaque nihil, soluta autem ad, error consequatur veniam illum cumque, cupiditate id. Voluptatum asperiores nihil qui voluptatibus nobis ad, id perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel est sed aperiam adipisci vero, numquam ab dolor saepe. Voluptatibus fuga, eligendi ratione ab consectetur fugiat odit officiis dolore magnam exercitationem.&lt;/p&gt;
 </description>
         <pubDate>Sat, 19 Dec 2015 21:36:58 +0800</pubDate>
-        <link>http://localhost:4000/blog/2015/12/19/selamat-datang-di-blog-pertamaku-dengan-jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2015/12/19/selamat-datang-di-blog-pertamaku-dengan-jekyll/</guid>
+        <link>http://mbahgoez.github.io/blog/2015/12/19/selamat-datang-di-blog-pertamaku-dengan-jekyll/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2015/12/19/selamat-datang-di-blog-pertamaku-dengan-jekyll/</guid>
         
         
         <category>Introduction</category>
