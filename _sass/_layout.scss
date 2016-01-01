@@ -100,7 +100,6 @@ header {
     }
 
     .logo {
-
         @include phone {
             width:80%;
         }
@@ -108,9 +107,9 @@ header {
                 font-family:'raleway';
                 font-weight: 900;
                 color:#555;
-                font-size: 35px;
+                font-size: 24px;
                 display: block;
-                padding:15px 10px 10px 0px;
+                padding:10px 10px 10px 0px;
 
                 @include phone {
                     padding-left: 40%;
@@ -145,7 +144,7 @@ header {
                 padding:5px;
             }
 
-        
+
 
             .close {
                 display: none;
@@ -167,12 +166,12 @@ header {
         }
 
 
-.caption {      
+.caption {
     display: none;
 
     @include phone {
         display: block;
-    
+
     i {
         text-align: center;
         font-size: 50px;
@@ -207,7 +206,8 @@ header {
 
         ul {
             text-align:center;
-            padding:20px 10px 10px 10px;
+            padding:10px 10px 10px 10px;
+            margin-bottom:0;
             @include phone {
                 text-align: left;
             }
@@ -215,7 +215,7 @@ header {
             li {
                 display:inline-block;
                 box-sizing:border-box;
-                padding:5px;
+                padding:2px;
 
                 @include phone {
                     display:block;
@@ -224,7 +224,7 @@ header {
                 a {
                     transition:all .1s ease;
                     display: block;
-                    padding:5px 15px;
+                    padding:5px 10px;
                     font-family: 'raleway';
                     font-size:16px;
                     font-weight: 500;
@@ -322,7 +322,7 @@ div.content {
         box-sizing:border-box;
         padding:20px 0px;
         li {
-            padding:20px 0px;
+            padding:50px 0px;
         }
         div.post-card {
             position: relative;
@@ -338,13 +338,21 @@ div.content {
                 padding: 20px;
             }
 
-            h2 {
+            h1 {
                 padding:20px 0px 0px 0px;
                 font-size:42px;
 
                 @include phone {
                     font-size: 20px;
                 }
+            }
+            h2 {
+              padding:20px 0px 0px 0px;
+              font-size:42px;
+
+              @include phone {
+                font-size:20px;
+              }
             }
             p.meta-author {
                 padding:5px 0px 10px 0px;
@@ -403,6 +411,10 @@ div.content {
                 }// hover
             } // readmore
         }// post card
+    }
+
+    div.division {
+      padding:30px 0;
     }
 
 
@@ -484,6 +496,7 @@ div.content {
 
             li {
                 padding:3px;
+                display: inline-block;
                 box-sizing:border-box;
 
                 @include phone {
@@ -549,7 +562,7 @@ div.related {
                         font-size: 13px;
                         font-weight: 100;
                     }
-                    
+
                 }
                 time {
                     color:#aaa;
@@ -630,7 +643,7 @@ div.toTop {
     box-shadow: 0px 2px 5px 0px #333;
     cursor: pointer;
     transition:all .3s ease;
-    transform:rotate(0deg); 
+    transform:rotate(0deg);
 
     @include phone {
         display: none;
@@ -668,16 +681,16 @@ div.overlay {
 .single-post {
     box-sizing:border-box;
     padding:40px 20px 100px 20px;
-    
-    
+
+
 
     .post {
         padding: 50px;
-        box-shadow: 0px 2px 5px 0px #ccc;   
+        box-shadow: 0px 2px 5px 0px #ccc;
         background: #fff;
     }
 
-    
+
     h2 {
         color:#555;
     }
@@ -701,7 +714,7 @@ div.overlay {
         color:#666;
         line-height: 150%;
         font-size: 18px;
-        font-weight: 100;   
+        font-weight: 100;
     }
 }
 
@@ -722,4 +735,3 @@ div.estimate {
         font-size: 10px;
     }
 }
-

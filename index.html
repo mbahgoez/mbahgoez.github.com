@@ -7,7 +7,7 @@ layout: default
   <h1>
     Yang lain bersandiwara gw apa adanya
   </h1>
-  <h3> 
+  <h3>
     - By Bagus Mantonafi -
   </h3>
 </div>
@@ -18,7 +18,7 @@ layout: default
 <div class="content" id="content">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">  
+      <div class="col-lg-10 col-lg-push-1">
         <ul class="listed">
 
         {% for post in site.posts %}
@@ -37,7 +37,7 @@ layout: default
 
               <p class="meta-author">
                 <i class="icon ion-calendar"></i>
-                
+
                 {{ post.date | date: "%b %-d, %Y" }}
 
                 <span>|</span>
@@ -69,8 +69,8 @@ layout: default
 
               {{ post.content}}
 
-              <a 
-              class="readmore" 
+              <a
+              class="readmore"
               href="{{ post.url | prepend: site.baseUrl }}">
                 Read More
               </a>
@@ -81,10 +81,16 @@ layout: default
 
         </ul>
       </div><!-- col-8 -->
+    </div><!-- row -->
 
-      <div class="col-lg-4">
-       {% include sidebar_tags.html %}
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
 
+        <div class="division">
+          {% include sidebar_tags.html %}
+        </div>
+
+        <div class="division">
         <div class="categories">
           <h1>
             <i class="icon ion-ios-paper-outline"></i>
@@ -94,7 +100,7 @@ layout: default
           <ul>
             <li>
               <a href="#">
-                Linux     
+                Linux
               </a>
             </li>
 
@@ -122,14 +128,15 @@ layout: default
             </li>
           </ul>
         </div><!-- categories -->
+        </div>
+
+    <div class="division">
+
+      {% include related_posts.html %}
+    </div>
 
 
-    {% include related_posts.html %}
-
-
-      </div><!-- col -4 -->
+      </div><!-- col 8 -->
     </div><!-- row -->
   </div><!-- container -->
 </div><!-- content -->
-
-

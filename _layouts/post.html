@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="background-image" id="back" style="display:none">
-	<h3> 
+	<h3>
 		- By Bagus Mantonafi -
 	</h3>
 </div>
@@ -11,25 +11,25 @@ layout: default
 <div class="content" id="content">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8">	
+			<div class="col-lg-10 col-lg-push-1">
 				<div class="single">
 					<div class="post-card">
-						
+
 						{% if page.image %}
 
 						<img class="img-fit" src="{{ page.image }}" alt="">
 
 						{% endif %}
 
-						<h2>
+						<h1>
 							{{ page.title }}
-						</h2>
+						</h1>
 
 						<p class="meta-author">
 							<i class="icon ion-calendar"></i>
 								{{ page.date | date: "%b %-d, %Y" }}
 							<span>|</span>
-							
+
 
 							{% if page.author %}
 							<a href="#">
@@ -42,23 +42,19 @@ layout: default
 							{{ page.categories }}
 						</p>
 
-						
-						
+
+
 						{{content}}
 
 
 
-						<hr>
-
-
-
-						<hr class="clearfix">
+					<div class="division">
 
 						 <div class="g-plus" data-action="share" data-annotation="bubble"></div>
 
 
 
-						<a href="https://twitter.com/share" 
+						<a href="https://twitter.com/share"
 							class="twitter-share-button"{count}>
 						</a>
 
@@ -67,7 +63,7 @@ layout: default
 						</script>
 
 
-						<!-- 
+						<!--
 						<div
 						  class="fb-like"
 						  data-share="true"
@@ -112,9 +108,9 @@ layout: default
 						</script>
 
  -->
- 
 
-						<hr>
+
+						</div>
 
 
 						{% include comment.html%}
@@ -122,10 +118,14 @@ layout: default
 					</div><!-- post-card -->
 				</div><!--single -->
 			</div><!-- col-8 -->
+		</div>
 
-			<div class="col-lg-4">
-				
+
+		<div class="row">
+			<div class="col-lg-10 col-lg-push-1">
+			<div class="division">
 				{% include sidebar_tags.html %}
+			</div>
 
 
 				<div class="categories">
@@ -137,7 +137,7 @@ layout: default
 					<ul>
 						<li>
 							<a href="#">
-								Linux			
+								Linux
 							</a>
 						</li>
 
@@ -165,6 +165,10 @@ layout: default
 						</li>
 					</ul>
 				</div><!-- categories -->
+
+				<div class="division">
+					{% include related_posts.html %}
+				</div>
 			</div><!-- col -4 -->
 		</div><!-- row -->
 	</div><!-- container -->
