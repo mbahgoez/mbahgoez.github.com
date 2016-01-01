@@ -22,14 +22,14 @@ $(document).ready(function(){
 
 	var content = document.getElementById('content');
 	content.style.top = headerHeight+'px';
-	
+
 	// var footer = document.getElementById('footer');
 	// footer.style.top = headerHeight+'px';
 
 
 
 // $(document).ready(function(){
-	
+
 // 	widthMedia = window.outerWidth;
 
 
@@ -136,7 +136,7 @@ var widthDisplay = function(){
 
 
 var menuOpen = function(size){
-	
+
 	if(size < 768){
 		$('div.toggle-menu').click(function(){
 			$('nav.menu').css('transform','translateX(0%)');
@@ -147,7 +147,7 @@ var menuOpen = function(size){
 }
 
 var menuClose = function(size){
-	
+
 	if(size < 768){
 		$('.btn-close').click(function(){
 			$('nav.menu').css('transform', 'translateX(-100%)');
@@ -160,5 +160,5 @@ var menuClose = function(size){
 
 
 $(document).ready(function(){
-	widthDisplay();	
+	widthDisplay();
 })
