@@ -1,7 +1,7 @@
  <header id="header">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-md-3 col-sm-3">
           <div class="toggle-menu">
             <i class="icon ion-navicon">
               
@@ -19,7 +19,7 @@
       <div class="overlay">
           </div>
 
-        <div class="col-lg-7 col-lg-push-2">
+        <div class="col-lg-7 col-lg-push-2 col-md-7 col-md-push-2 col-sm-9">
           <nav class="menu">
 
             <div class="btn-close">
@@ -28,13 +28,19 @@
             </div>
 
             <ul>
-              <li class="active">
-                <a href="{{ site.baseurl }}/">
-                <i class="icon ion-ios-paper-outline"></i>
-                Blog
+            {% for nav_item in site.data.nav %}
+              <li>
+                <a href="{{nav_item.link}}">
+                <i class="icon {{nav_item.icon}}"></i>
+                {{nav_item.name}}
                 </a>
               </li>
-              <li>
+              {% endfor %}
+
+
+
+
+<!--               <li>
                 <a href="#">
                 <i class="icon ion-ios-albums-outline"></i>
                 Portofolio
@@ -51,7 +57,7 @@
                 <i class="icon ion-ios-person-outline"></i>
                   About
                 </a>
-              </li>
+              </li> -->
             </ul>
 
             <div class="caption">

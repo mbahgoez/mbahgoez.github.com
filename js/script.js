@@ -161,4 +161,37 @@ var menuClose = function(size){
 
 $(document).ready(function(){
 	widthDisplay();
-})
+
+
+
+	var ypos = window.pageYOffset;
+	var sekat = $('.sekat-komentar').offset();
+	sekat = sekat.top;
+
+
+
+	var scroll = function(){
+		var ypos = window.pageYOffset;
+		var sekat = $('.sekat-komentar').offset();
+		sekat = sekat.top;
+		showNext(ypos, sekat);
+	}
+
+	window.addEventListener('scroll', scroll); 
+
+var showNext = function(ypos, sekat){
+		sekat = sekat-500;
+		if(ypos >= sekat){
+			$('.nextpost').css('transform', 'translateX(0%)');
+		}
+		else {
+			$('.nextpost').css('transform', 'translateX(100%)');
+		}
+
+		console.log(sekat +" "+ypos);
+	}
+	showNext(ypos, sekat);
+	
+
+});
+

@@ -18,18 +18,25 @@ layout: default
 <div class="content" id="content">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-lg-push-1">
+      <div class="col-lg-8">
         <ul class="listed">
 
         {% for post in site.posts %}
-          <li>
+          <li class="list">
             <div class="post-card">
 
-            <div class="image-post">
-              {% if post.image %}
-              <img class="img-fit" src="img/java_linux.jpg" alt="">
-              {% endif %}
-            </div>
+            <div class="estimate">
+
+
+{% capture words %}
+  {{ page.content | number_of_words | minus: 180 }}
+{% endcapture %}
+{% unless words contains "-" %}
+  {{ words | plus: 180 | divided_by: 180 | prepend: "Diperkirakan sekitar " | append: " Menit untuk membacanya" }}
+{% endunless %}
+
+</div>
+<hr class="clearfix">
 
               <h2>
                 {{ post.title }}
@@ -40,40 +47,37 @@ layout: default
 
                 {{ post.date | date: "%b %-d, %Y" }}
 
-                <span>|</span>
+                <span>//</span>
 
                 {% if post.author %}
                 <a href="#">
                   {{post.author}}
                 </a>
-                <span>|</span>
+                <span>//</span>
                 {% endif %}
 
                 {{ post.categories }}
-              |
+              
 
-              <div class="estimate">
-
-
-{% capture words %}
-  {{ page.content | number_of_words | minus: 180 }}
-{% endcapture %}
-{% unless words contains "-" %}
-  {{ words | plus: 180 | divided_by: 180 | append: " minutes to read" }}
-{% endunless %}
-
-</div>
-
+              
 
               </p>
 
-              {{ post.content}}
+
+            <!-- <div class="image-post">
+              {% if post.image %}
+              <img class="img-fit" src="{{post.image}}" alt="">
+              {% endif %}
+            </div> -->
+
+              <!-- {{ post.excerpt }} -->
 
               <a
               class="readmore"
-              href="{{ post.url | prepend: site.baseUrl }}">
+              href="{{ post.url | prepend: site.baseUrl }}" target="_blank">
                 Read More
               </a>
+
             </div>
           </li>
         {% endfor %}
@@ -81,10 +85,10 @@ layout: default
 
         </ul>
       </div><!-- col-8 -->
-    </div><!-- row -->
+ <!--    </div><! row -->
 
-    <div class="row">
-      <div class="col-lg-10 col-lg-push-1">
+<!--     <div class="row"> -->
+      <div class="col-lg-4">
 
         <div class="division">
           {% include sidebar_tags.html %}
@@ -138,5 +142,8 @@ layout: default
 
       </div><!-- col 8 -->
     </div><!-- row -->
+    <div class="row">
+    
+    </div>
   </div><!-- container -->
 </div><!-- content -->

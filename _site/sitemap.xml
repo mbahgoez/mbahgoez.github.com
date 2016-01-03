@@ -3,6 +3,36 @@
   
     
     <url>
+      <loc>http://mbahgoez.github.io/blog/2016/01/03/2016-01-02-cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunanya/</loc>
+      
+        <lastmod>2016-01-03T10:38:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://mbahgoez.github.io/blog/2016/01/02/Perlukah-setiap-Programmer-Menginstall-NodeJS/</loc>
+      
+        <lastmod>2016-01-02T22:52:20+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://mbahgoez.github.io/blog/2015/12/20/welcome-to-jekyll/</loc>
       
         <lastmod>2015-12-20T20:09:25+08:00</lastmod>
@@ -55,7 +85,7 @@
     <url>
       <loc>http://mbahgoez.github.io</loc>
       
-        <lastmod>2016-01-01T15:00:48+08:00</lastmod>
+        <lastmod>2016-01-03T22:46:55+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

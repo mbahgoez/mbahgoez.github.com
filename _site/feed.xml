@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BagusMantonafi</title>
+    <title>mbahgoez</title>
     <description>mbahgoez informasi Pemograman utamanya Web dan Mobile. berawal dari sang admin yang orangnya selalu lupa-lupa, dan mencoba membuat blognya sendiri
 </description>
     <link>http://mbahgoez.github.io/</link>
     <atom:link href="http://mbahgoez.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Jan 2016 15:00:48 +0800</pubDate>
-    <lastBuildDate>Fri, 01 Jan 2016 15:00:48 +0800</lastBuildDate>
+    <pubDate>Sun, 03 Jan 2016 22:46:55 +0800</pubDate>
+    <lastBuildDate>Sun, 03 Jan 2016 22:46:55 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Cara Menginstall Node JS Versi 4.x pada Ubuntu 14.04 LTS dan turunannya</title>
+        <description>
+</description>
+        <pubDate>Sun, 03 Jan 2016 10:38:28 +0800</pubDate>
+        <link>http://mbahgoez.github.io/blog/2016/01/03/2016-01-02-cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunanya/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2016/01/03/2016-01-02-cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunanya/</guid>
+        
+        
+        <category>Node</category>
+        
+        <category>JS</category>
+        
+      </item>
+    
+      <item>
+        <title>Perlukah setiap programmer Menginstall NodeJS</title>
+        <description>&lt;p&gt;Jika anda adalah seorang &lt;b&gt;Web Developer&lt;/b&gt; tentu saja anda pernah mendengar nama &lt;b&gt;Node JS&lt;/b&gt;, NodeJS sendiri adalah Javascript Framework Server side yang berguna untuk membuat aplikasi berbasis web secara realtime dengan bahasa pemograman javascript.&lt;/p&gt;
+
+&lt;p&gt;Dulu sekali sangatlah susah untuk Membuat Aplikasi Berbasis Web yang dapat berjalan secara realtime layaknya aplikasi native, namun semenjak adanya NodeJS hal tersebut mulai bisa teratasi. Meskipun bukan pengembang yang menggunakan NodeJS sebagai platformnya atau memang belum berniat mempelajarinya, Menginstall NodeJS pada komputer bagi programmer web sepertinya sudah sangat wajib hukumnya.&lt;/p&gt;
+
+&lt;p&gt;dulu ketika masih mempelajari html dan css saya tidak memerlukan nodejs, tapi setelah banyak ilmu yang saya pelajari mengenai dua bahasa itu saya mulai upgrade ilmu saya dari sebelumnya masih menggunakan css standar kemudian beralih ke scss sebagai css preprosesornya, kemudian dari sebelumnya saya harus kewalahan menduplikasi setiap property CSS3 dengan prefix untuk setiap browser versi lama(-webkit-, -moz-, -o-) untungnya yg seperti itu bisa teratasi dengan yang namanya autoprefix, autoprefix akan membuatkan prefix tersebut secara otomatis dan untuk menggunakannya kita harus menginstall nodejs.&lt;/p&gt;
+
+&lt;p&gt;Bukan cuma &lt;b&gt;CSS&lt;/b&gt; saja, Sekarang untuk Membuat Aplikasi Android Seorang Programmer tidaklah harus mempelajari bahasa java atau harus dalam tingkat mahir Java, Sekarang bisa Membuatnya menggunakan Pemograman Web. jadi buat agan-agan yang bernasib sama seperti saya jago web tapi belum jago JAVA, jangan sia-siakan ilmunya hanya karena pengen cepet-cepet jago bikin aplikasi android secara native dengan java, ilmu webnya dibuang begitu aja, lanjutin aja terus ilmunya klo perlu sampai bisa NodeJS. Nah, Salah satu Framework dan Tools yang digunakan untuk membangun aplikasi android adalah dengan &lt;a href=&quot;&quot;&gt;Phonegap&lt;/a&gt;, &lt;a href=&quot;&quot;&gt;Ionic Framework&lt;/a&gt;, &lt;a href=&quot;&quot;&gt;React Native&lt;/a&gt; dan &lt;a href=&quot;&quot;&gt;NativeScript&lt;/a&gt; selain yang disebutkan masih banyak lagi.&lt;/p&gt;
+
+&lt;p&gt;Jika anda tertarik untuk menginstall NodeJS anda bisa mengikuti instruksi pada link tutorial dibawah ini.&lt;/p&gt;
+&lt;ul class=&quot;list-link&quot;&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;&quot;&gt;
+			Install NodeJS 4.x pada Ubuntu 14.04 thrusty tahr dan turunannya
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;a href=&quot;&quot;&gt;
+			Install NodeJS 4.x pada Windows 7, 8, 10
+		&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Mac OS (Cooming soon)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Selain dari yang saya sebutkan diatas masih banyak lagi yang sangat membantu dari Node JS ini, yang mungkin saya sendiri tidak tau apa saja itu.&lt;/p&gt;
+
+&lt;p&gt;Saya sadar banyak sekali programmer di indonesia yang masih menggunakan cara lama untuk melakukan aktivitas kodingnya, selain itu sering sekali penerapan sebuah teknologi baru di indonesia selalu terlambat dari tren teknologi luar negeri. oleh karena itu kenapa kita nggak mempelajari teknologi yang sedang tren di luar negeri ini.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 Jan 2016 22:52:20 +0800</pubDate>
+        <link>http://mbahgoez.github.io/blog/2016/01/02/Perlukah-setiap-Programmer-Menginstall-NodeJS/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2016/01/02/Perlukah-setiap-Programmer-Menginstall-NodeJS/</guid>
+        
+        
+        <category>Node</category>
+        
+        <category>JS</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
