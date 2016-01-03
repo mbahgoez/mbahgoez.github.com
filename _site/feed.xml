@@ -6,8 +6,8 @@
 </description>
     <link>http://mbahgoez.github.io/</link>
     <atom:link href="http://mbahgoez.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Jan 2016 22:57:13 +0800</pubDate>
-    <lastBuildDate>Sun, 03 Jan 2016 22:57:13 +0800</lastBuildDate>
+    <pubDate>Sun, 03 Jan 2016 23:26:33 +0800</pubDate>
+    <lastBuildDate>Sun, 03 Jan 2016 23:26:33 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -15,8 +15,8 @@
         <description>
 </description>
         <pubDate>Sun, 03 Jan 2016 10:38:28 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/2016/01/03/2016-01-02-cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunanya/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2016/01/03/2016-01-02-cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunanya/</guid>
+        <link>http://mbahgoez.github.io/blog/2016/01/03/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunanya/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2016/01/03/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunanya/</guid>
         
         
         <category>Node</category>

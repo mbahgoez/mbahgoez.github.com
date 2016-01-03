@@ -4,7 +4,7 @@ title: Perlukah setiap programmer Menginstall NodeJS
 date: 2016-01-02 22:52:20 +0800
 categories: Node JS
 author:  BagusMantonafi
-image: /image/deb.png
+image: /image/nodejs-logo.png
 <!-- description: -->
 ---
 
