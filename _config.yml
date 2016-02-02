@@ -16,7 +16,7 @@ facebook_username: mbah.goezt
 twitter_username: BagusMantonafi
 github_username:  mbahgoez
 permalink: /blog/:year/:month/:day/:title/
-
+highlighter: pygments
 
 # Build settings
 markdown: kramdown

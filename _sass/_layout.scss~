@@ -332,7 +332,7 @@ div.content {
         div.post-card {
             position: relative;
             box-sizing:border-box;
-            padding:30px 80px;
+            padding:20px;
             font-family: 'raleway';
             font-weight: 900;
             background:#fff;
@@ -355,8 +355,6 @@ div.content {
             h2 {
               padding:20px 0px 0px 0px;
               font-size:42px;
-              color:#444;
-              font-family: 'raleway', helvetica, sans-serif;
 
               @include phone {
                 margin-top: 20px;
@@ -389,26 +387,16 @@ div.content {
             }
 
             p {
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin-top: 40px;
+                margin-bottom: 40px;
                 color:#666;
-                line-height: 150%;
+                line-height: 170%;
                 font-size: 18px;
-                font-weight: 500;
-                font-family:'raleway', helvetica, sans-serif;
-                
+                font-weight: 200;
+                font-family: helvetica;
 
                 @include phone {
                     font-size: 14px;
-                }
-            }
-
-            .material {
-                margin-left: 60px;
-                li {
-                    font-weight: 200;
-                    color:#666;
-                    font-size: 20px;
                 }
             }
             ul.list-link {
