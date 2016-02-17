@@ -6,6 +6,7 @@ categories: ionic
 author: Bagus Mantonafi
 description: saat ini banyak sekali bermunculan tools maupun framework yang dapat digunakan untuk membangun aplikasi mobile menggunakan teknologi web salah satu contohnya ionic framework.
 keyword: install ionic, ionicframework, cara install ionic, menginstall ionic, membuat project ionic
+imageog: /image/ionic/ionic-framework-solid.jpg
 image: /image/ionic/ionic-framework.jpg
 ---
 Aplikasi mobile saat ini sudah menjadi tren di kalangan developer. banyaknya permintaan ini diakibatkan karena mulai berjamurnya pengguna smartphone. sebagai seorang programmer situasi seperti ini bisa menjadi ladang penghasilan yang menggiurkan. karena dengan banyaknya pengguna smartphone maka permintaan akan konten digital misalnya seperti aplikasi mobile akan meningkat.

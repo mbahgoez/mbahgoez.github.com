@@ -33,6 +33,12 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="{% if page.title %}{{page.title}} {% else %} {{site.title}} - Bukan Cuma Sekedar Coding {% endif %}">
 
+    {% if page.imageog %}
+    <meta property="og:image" content="{{ site.url }}{{ page.imageog }}"/>
+    {% else %}
+    <meta property="og:image" content="{{ page.image }}"/>
+    {% endif %}
+
     {% if page.description %}
     <meta property="og:description" content="{{page.description | strip_html | truncate:160 }}">
     {% else %}
