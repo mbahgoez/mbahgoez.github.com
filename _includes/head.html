@@ -30,7 +30,7 @@
   {% endif %}
 
     <meta property="og:locale" content="id_ID">
-    <meta property="og:type" content="article">
+    <meta property="og:type" content="blog">
     <meta property="og:title" content="{% if page.title %}{{page.title}} {% else %} {{site.title}} - Bukan Cuma Sekedar Coding {% endif %}">
 
     {% if page.imageog %}
@@ -49,12 +49,15 @@
     {% endif %}">
   {% endif %}
 
+  <meta property="fb:app_id" content="148779352157076">
+
   <meta property="og:url" content="{{page.url | replace:'index.html','' | prepend:site.baseurl | prepend: site.url}}">
   <meta property="og:site_name" content="{{site.title}}">
   <meta property="article:published_time" content="{{page.date}}">
   <meta property="language" content="Indonesia">
   <meta property="rating" content="general">
   <meta name="robots" content="index">
+
 
 
 	<!-- <link rel="stylesheet" href="http://mbahgoez.github.io/css/bootstrap.min.css">
