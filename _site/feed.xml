@@ -6,8 +6,8 @@
 </description>
     <link>http://mbahgoez.github.io/</link>
     <atom:link href="http://mbahgoez.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Feb 2016 13:13:13 +0800</pubDate>
-    <lastBuildDate>Wed, 17 Feb 2016 13:13:13 +0800</lastBuildDate>
+    <pubDate>Wed, 17 Feb 2016 13:46:46 +0800</pubDate>
+    <lastBuildDate>Wed, 17 Feb 2016 13:46:46 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -20,13 +20,13 @@
 
 &lt;p&gt;saat ini banyak sekali bermunculan tools maupun framework yang dapat digunakan untuk membangun aplikasi mobile menggunakan teknologi web salah satu contohnya ionic framework. ionic framework sendiri adalah framework yang dapat diteman-temanlkan untuk membangun aplikasi mobile menggunakan teknologi web namun meski begitu tetap focus pada performa. Sehingga aplikasi yang dibuat menggunakan ionic dapat berjalan dengan mulus layaknya aplikasi yang dibangun secara native. untuk dapat menggunakan ionic teman-teman setidaknya menguasai HTML, CSS dan Javascript, jika sudah mengusai angularjs itu sangat memudahkan nantinya karena ionic ini dibuatnya menggunakan gaya mvc angularjs.&lt;/p&gt;
 
-&lt;h3 id=&quot;beberapa-syarat-untuk-dapat-menginstall-ionic&quot;&gt;Beberapa syarat untuk dapat menginstall ionic&lt;/h3&gt;
+&lt;h3&gt;Beberapa syarat untuk dapat menginstall ionic&lt;/h3&gt;
 &lt;ol class=&quot;material&quot;&gt;
 	&lt;li&gt;Koneksi internet&lt;/li&gt;
 	&lt;li&gt;Komputer yang sudah terinstall nodejs&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;langkah-langkah-install&quot;&gt;Langkah-langkah install&lt;/h3&gt;
+&lt;h3&gt;Langkah-langkah install&lt;/h3&gt;
 &lt;ol class=&quot;material&quot;&gt;
 	&lt;li&gt;Buka terminal/cmd&lt;/li&gt;
 	&lt;li&gt;
@@ -39,7 +39,7 @@
 	&lt;img src=&quot;/image/ionic/cek-versi-ionic.png&quot; alt=&quot;perintah cek versi ionic bagus mantonafi&quot; /&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;membuat-project-ionic&quot;&gt;Membuat Project ionic&lt;/h3&gt;
+&lt;h3&gt;Membuat Project ionic&lt;/h3&gt;
 &lt;ol class=&quot;material&quot;&gt;
 	&lt;li&gt;Buka terminal/cmd.&lt;/li&gt;
 	&lt;li&gt;Masukan perintah &lt;kbd&gt;ionic start inicontoh blank&lt;/kbd&gt; jika di linux dan mac gagal silahkan menambahkan &quot;sudo&quot; di depan perintah tadi sehingga menjadi &lt;kbd&gt;sudo ionic start inicontoh blank&lt;/kbd&gt;.&lt;/li&gt;

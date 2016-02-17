@@ -5,6 +5,7 @@ date: 2016-02-01 23:23:40 +0800
 categories: ionic
 author: Bagus Mantonafi
 description: saat ini banyak sekali bermunculan tools maupun framework yang dapat digunakan untuk membangun aplikasi mobile menggunakan teknologi web salah satu contohnya ionic framework.
+keyword: install ionic, ionicframework, cara install ionic, menginstall ionic, membuat project ionic
 image: /image/ionic/ionic-framework.jpg
 ---
 Aplikasi mobile saat ini sudah menjadi tren di kalangan developer. banyaknya permintaan ini diakibatkan karena mulai berjamurnya pengguna smartphone. sebagai seorang programmer situasi seperti ini bisa menjadi ladang penghasilan yang menggiurkan. karena dengan banyaknya pengguna smartphone maka permintaan akan konten digital misalnya seperti aplikasi mobile akan meningkat.
@@ -15,13 +16,13 @@ Bagaimana caranya jika programmer ingin sekali coding namun hasil codingannya bi
 
 saat ini banyak sekali bermunculan tools maupun framework yang dapat digunakan untuk membangun aplikasi mobile menggunakan teknologi web salah satu contohnya ionic framework. ionic framework sendiri adalah framework yang dapat diteman-temanlkan untuk membangun aplikasi mobile menggunakan teknologi web namun meski begitu tetap focus pada performa. Sehingga aplikasi yang dibuat menggunakan ionic dapat berjalan dengan mulus layaknya aplikasi yang dibangun secara native. untuk dapat menggunakan ionic teman-teman setidaknya menguasai HTML, CSS dan Javascript, jika sudah mengusai angularjs itu sangat memudahkan nantinya karena ionic ini dibuatnya menggunakan gaya mvc angularjs.
 
-###Beberapa syarat untuk dapat menginstall ionic###
+<h3>Beberapa syarat untuk dapat menginstall ionic</h3>
 <ol class="material">
 	<li>Koneksi internet</li>
 	<li>Komputer yang sudah terinstall nodejs</li>
 </ol>
 
-###Langkah-langkah install###
+<h3>Langkah-langkah install</h3>
 <ol class="material">
 	<li>Buka terminal/cmd</li>
 	<li>
@@ -35,7 +36,7 @@ saat ini banyak sekali bermunculan tools maupun framework yang dapat digunakan u
 </ol>
 
 
-###Membuat Project ionic###
+<h3>Membuat Project ionic</h3>
 <ol class="material">
 	<li>Buka terminal/cmd.</li>
 	<li>Masukan perintah <kbd>ionic start inicontoh blank</kbd> jika di linux dan mac gagal silahkan menambahkan "sudo" di depan perintah tadi sehingga menjadi <kbd>sudo ionic start inicontoh blank</kbd>.</li>

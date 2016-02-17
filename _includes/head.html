@@ -24,6 +24,11 @@
     {% endif %}">
   {% endif %}
 
+
+  {% if page.keyword %}
+    <meta name="keyword" content="{{page.keyword}}"/>
+  {% endif %}
+
     <meta property="og:locale" content="id_ID">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{% if page.title %}{{page.title}} {% else %} {{site.title}} - Bukan Cuma Sekedar Coding {% endif %}">
