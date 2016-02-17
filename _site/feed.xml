@@ -6,9 +6,84 @@
 </description>
     <link>http://mbahgoez.github.io/</link>
     <atom:link href="http://mbahgoez.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Feb 2016 12:32:31 +0800</pubDate>
-    <lastBuildDate>Tue, 02 Feb 2016 12:32:31 +0800</lastBuildDate>
+    <pubDate>Wed, 17 Feb 2016 13:13:13 +0800</pubDate>
+    <lastBuildDate>Wed, 17 Feb 2016 13:13:13 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Mudahnya membuat aplikasi Android dan iOS dengan Ionic</title>
+        <description>&lt;p&gt;Aplikasi mobile saat ini sudah menjadi tren di kalangan developer. banyaknya permintaan ini diakibatkan karena mulai berjamurnya pengguna smartphone. sebagai seorang programmer situasi seperti ini bisa menjadi ladang penghasilan yang menggiurkan. karena dengan banyaknya pengguna smartphone maka permintaan akan konten digital misalnya seperti aplikasi mobile akan meningkat.&lt;/p&gt;
+
+&lt;p&gt;Permasalahannya untuk mengembangkan sebuah aplikasi mobile yang tersedia di berbagai platform, programmer setidaknya menguasai berbagai bahasa pemrograman yang dianjurkan. sebagai contoh jika ingin membuat aplikasi android setidaknya developer mengerti bahasa pemograman java. kemudian jika ingin membuat aplikasi untuk ios setidaknya menguasai pemograman semisalnya Objective C atau Swift.&lt;/p&gt;
+
+&lt;p&gt;Bagaimana caranya jika programmer ingin sekali coding namun hasil codingannya bisa untuk berbagai platform, tanpa harus menulis ulang dari awal dengan bahasa pemograman yang berbeda. lalu bagaimana jika seorang programmer ingin membuat aplikasi mobile sedangkan kemampuannya hanya sebatas HTML, CSS dan Javascript.&lt;/p&gt;
+
+&lt;p&gt;saat ini banyak sekali bermunculan tools maupun framework yang dapat digunakan untuk membangun aplikasi mobile menggunakan teknologi web salah satu contohnya ionic framework. ionic framework sendiri adalah framework yang dapat diteman-temanlkan untuk membangun aplikasi mobile menggunakan teknologi web namun meski begitu tetap focus pada performa. Sehingga aplikasi yang dibuat menggunakan ionic dapat berjalan dengan mulus layaknya aplikasi yang dibangun secara native. untuk dapat menggunakan ionic teman-teman setidaknya menguasai HTML, CSS dan Javascript, jika sudah mengusai angularjs itu sangat memudahkan nantinya karena ionic ini dibuatnya menggunakan gaya mvc angularjs.&lt;/p&gt;
+
+&lt;h3 id=&quot;beberapa-syarat-untuk-dapat-menginstall-ionic&quot;&gt;Beberapa syarat untuk dapat menginstall ionic&lt;/h3&gt;
+&lt;ol class=&quot;material&quot;&gt;
+	&lt;li&gt;Koneksi internet&lt;/li&gt;
+	&lt;li&gt;Komputer yang sudah terinstall nodejs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;langkah-langkah-install&quot;&gt;Langkah-langkah install&lt;/h3&gt;
+&lt;ol class=&quot;material&quot;&gt;
+	&lt;li&gt;Buka terminal/cmd&lt;/li&gt;
+	&lt;li&gt;
+		Untuk windows dapat mengetik &lt;kbd&gt;npm install -g ionic cordova&lt;/kbd&gt; pada terminal/cmd
+	&lt;/li&gt;
+	&lt;li&gt;
+		Jika menggunakan Linux dan Mac dapat dengan mengetik &lt;kbd&gt;sudo npm install -g ionic cordova&lt;/kbd&gt;
+	&lt;/li&gt;
+	&lt;li&gt;jika proses instalasi sudah selesai silahkan mengetik ke terminal dengan perintah &lt;kbd&gt;cordova -v &amp;amp;&amp;amp; ionic -v&lt;/kbd&gt;, atau &lt;kbd&gt;cordova -v&lt;/kbd&gt; dan &lt;kbd&gt;ionic -v&lt;/kbd&gt; untuk mengetahui apakah ionic berhasil terinstall atau tidak dan juga untuk mengetahui versi berapakah yang sudah terinstal&lt;/li&gt;
+	&lt;img src=&quot;/image/ionic/cek-versi-ionic.png&quot; alt=&quot;perintah cek versi ionic bagus mantonafi&quot; /&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;membuat-project-ionic&quot;&gt;Membuat Project ionic&lt;/h3&gt;
+&lt;ol class=&quot;material&quot;&gt;
+	&lt;li&gt;Buka terminal/cmd.&lt;/li&gt;
+	&lt;li&gt;Masukan perintah &lt;kbd&gt;ionic start inicontoh blank&lt;/kbd&gt; jika di linux dan mac gagal silahkan menambahkan &quot;sudo&quot; di depan perintah tadi sehingga menjadi &lt;kbd&gt;sudo ionic start inicontoh blank&lt;/kbd&gt;.&lt;/li&gt;
+
+
+	&lt;img src=&quot;/image/ionic/ionic-serve.jpg&quot; alt=&quot;perintah ionic serve bagus mantonafi&quot; /&gt;
+	&lt;br /&gt;
+
+	&lt;em&gt;pastikan tersambung dengan internet karena ionic akan mendownload project dari repository&lt;/em&gt;
+
+
+	&lt;li&gt;Jika sudah, nanti ionic akan membuat project atau folder barus bernama &quot;inicontoh&quot;. didalam folder inilah nanti kita akan berkerja.&lt;/li&gt;
+
+
+	&lt;li&gt;Panggil directory/folder &quot;inicontoh&quot; menggunakan perintah &lt;kbd&gt;cd inicontoh&lt;/kbd&gt;.&lt;/li&gt;
+
+	&lt;li&gt;Lalu ketikan &lt;kbd&gt;ionic serve&lt;/kbd&gt; untuk menjalankan server. nanti secara otomatis ionic akan membuka browser dan mengarahkan ke localhost:8100 dan dibrowser inilah nanti kita akan dapat melihat preview tampilan dari aplikasi mobile yang akan dibuat.&lt;/li&gt;
+
+	&lt;img src=&quot;/image/ionic/ionic-serve-preview.jpg&quot; alt=&quot;tampilan ionic browser bagus mantonafi&quot; /&gt;
+
+&lt;/ol&gt;
+
+&lt;p&gt;Kira-kira seperti itulah proses penginstalan dan pembuatan project ionic. ionic menyediakan banyak keuntungan dan juga telah memenuhi kebutuhan setiap developer. karena dengan ioniclah masalah-masalah yang dihadapi Developer bisa teratasi.&lt;/p&gt;
+
+&lt;p&gt;Jika teman-teman masih bingung dengan tutorial diatas silahkan sampaikan pertanyaan pada kolom dibawah ini.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Link Referensi&lt;/strong&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ionicframework.com&quot;&gt;http://ionicframework.com&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&quot;https://ionicframework.com/getting-started/&quot;&gt;http://ionicframework.com/getting-started&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- link related --&gt;
+
+</description>
+        <pubDate>Mon, 01 Feb 2016 23:23:40 +0800</pubDate>
+        <link>http://mbahgoez.github.io/blog/ionic/mudahnya-membuat-aplikasi-android-dan-ios-dengan-ionic/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/ionic/mudahnya-membuat-aplikasi-android-dan-ios-dengan-ionic/</guid>
+        
+        
+        <category>ionic</category>
+        
+      </item>
     
       <item>
         <title>Cara menginstall Node JS Versi 4.x pada Ubuntu 14.04 LTS dan turunannya</title>
@@ -27,16 +102,13 @@
 &lt;p&gt;&lt;em&gt;* Untuk menginstall dengan file tar.gz nanti akan menyusul.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Demikian cara menginstall node js 4.x pada ubuntu 14.04 dan turunannya cara ini dapat diterapkan pada linux yang menggunakan package manager apt-get seperti ubuntu dan turunannya. untuk linux yang lain seperti arch linux, fedora bisa menggunakan package managernya masing-masing caranya ada pada website official.&lt;/p&gt;
-
 </description>
         <pubDate>Mon, 01 Feb 2016 21:52:00 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/2016/02/01/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunannya/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2016/02/01/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunannya/</guid>
+        <link>http://mbahgoez.github.io/blog/nodejs/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunannya/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/nodejs/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunannya/</guid>
         
         
-        <category>Node</category>
-        
-        <category>JS</category>
+        <category>NodeJS</category>
         
       </item>
     
@@ -70,13 +142,11 @@
 &lt;p&gt;Saya sadar banyak sekali programmer di indonesia yang masih menggunakan cara lama untuk melakukan aktivitas kodingnya, selain itu sering sekali penerapan sebuah teknologi baru di indonesia selalu terlambat dari tren teknologi luar negeri. oleh karena itu kenapa kita nggak mempelajari teknologi yang sedang tren di luar negeri ini.&lt;/p&gt;
 </description>
         <pubDate>Sat, 02 Jan 2016 22:52:20 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/2016/01/02/Perlukah-setiap-Programmer-Menginstall-NodeJS/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2016/01/02/Perlukah-setiap-Programmer-Menginstall-NodeJS/</guid>
+        <link>http://mbahgoez.github.io/blog/nodejs/Perlukah-setiap-Programmer-Menginstall-NodeJS/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/nodejs/Perlukah-setiap-Programmer-Menginstall-NodeJS/</guid>
         
         
-        <category>Node</category>
-        
-        <category>JS</category>
+        <category>NodeJS</category>
         
       </item>
     
@@ -98,13 +168,11 @@
 
 </description>
         <pubDate>Sun, 20 Dec 2015 20:09:25 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/2015/12/20/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2015/12/20/welcome-to-jekyll/</guid>
+        <link>http://mbahgoez.github.io/blog/jekyll/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/jekyll/welcome-to-jekyll/</guid>
         
         
         <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
@@ -113,8 +181,8 @@
         <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum itaque reiciendis, dicta sequi amet veniam alias libero voluptatem eveniet cumque? Adipisci ut dignissimos, provident nemo iste dolores blanditiis ducimus labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eaque nihil, soluta autem ad, error consequatur veniam illum cumque, cupiditate id. Voluptatum asperiores nihil qui voluptatibus nobis ad, id perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel est sed aperiam adipisci vero, numquam ab dolor saepe. Voluptatibus fuga, eligendi ratione ab consectetur fugiat odit officiis dolore magnam exercitationem.&lt;/p&gt;
 </description>
         <pubDate>Sat, 19 Dec 2015 21:36:58 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/2015/12/19/selamat-datang-di-blog-pertamaku-dengan-jekyll/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/2015/12/19/selamat-datang-di-blog-pertamaku-dengan-jekyll/</guid>
+        <link>http://mbahgoez.github.io/blog/introduction/selamat-datang-di-blog-pertamaku-dengan-jekyll/</link>
+        <guid isPermaLink="true">http://mbahgoez.github.io/blog/introduction/selamat-datang-di-blog-pertamaku-dengan-jekyll/</guid>
         
         
         <category>Introduction</category>

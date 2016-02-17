@@ -15,8 +15,9 @@ url: "http://mbahgoez.github.io" # the base hostname & protocol for your site
 facebook_username: mbah.goezt
 twitter_username: BagusMantonafi
 github_username:  mbahgoez
-permalink: /blog/:year/:month/:day/:title/
+permalink: /blog/:categories/:title/
 highlighter: pygments
+author: Bagus Mantonafi
 
 # Build settings
 markdown: kramdown

@@ -49,8 +49,9 @@ a:visited, a:active,a:hover {
 
 .img-fit {
     position:static;
-    margin-left:15%;
-    width:60%;
+    width:100%;
+    margin:30px 0;
+    box-shadow: 0px 1px 4px 0px #ccc;
 }
 
 a:hover {
@@ -396,7 +397,7 @@ div.content {
                 font-size: 18px;
                 font-weight: 500;
                 font-family:'raleway', helvetica, sans-serif;
-                
+
 
                 @include phone {
                     font-size: 14px;
@@ -405,11 +406,24 @@ div.content {
 
             .material {
                 margin-left: 60px;
+                @include phone {
+                  margin-left: 30px;
+                }
                 li {
                     font-weight: 200;
                     color:#666;
                     font-size: 20px;
+                    margin:10px 0;
+
+                    @include phone {
+                      font-size:14px;
+                    }
                 }
+            }
+
+            img {
+              box-shadow:0px 1px 5px 0px #ccc;
+              margin: 30px 0;
             }
             ul.list-link {
                 margin-left: 60px;
@@ -840,3 +854,9 @@ hr.clearfix {
     clear: both;
     visibility: hidden;
 }
+
+
+// kbd:before {
+//     content:"$";
+//     font-weight: bold;
+// }
