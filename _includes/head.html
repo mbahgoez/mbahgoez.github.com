@@ -36,7 +36,7 @@
     {% if page.imageog %}
     <meta property="og:image" content="{{ site.url }}{{ page.imageog }}"/>
     {% else %}
-    <meta property="og:image" content="{{ page.image }}"/>
+    <meta property="og:image" content="{{ site.url }}{{ page.image }}"/>
     {% endif %}
 
     {% if page.description %}
