@@ -16,7 +16,7 @@ facebook_username: mbah.goezt
 twitter_username: BagusMantonafi
 github_username:  mbahgoez
 permalink: /blog/:categories/:title/
-highlighter: pygments
+highlighter: pygments.rb
 author: Bagus Mantonafi
 
 # Build settings

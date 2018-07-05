@@ -4,11 +4,292 @@
     <title>mbahgoez</title>
     <description>mbahgoez informasi Pemograman utamanya Web dan Mobile. berawal dari sang admin yang orangnya selalu lupa-lupa, dan mencoba membuat blognya sendiri
 </description>
-    <link>http://mbahgoez.github.io/</link>
-    <atom:link href="http://mbahgoez.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Feb 2016 14:36:14 +0800</pubDate>
-    <lastBuildDate>Wed, 17 Feb 2016 14:36:14 +0800</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 05 Jul 2018 13:41:13 +0800</pubDate>
+    <lastBuildDate>Thu, 05 Jul 2018 13:41:13 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>5 Query SQL Dasar yang harus kamu ketahui ketika belajar Database + Soal Latihan</title>
+        <description>&lt;p&gt;Kali ini saya akan menjelaskan 5 Query SQL dasar yang seharusnya diketahui oleh pemula sebelum belajar SQL lebih dalam lagi. Query berikut ini sendiri query dasar yang cukup sering digunakan utamanya untuk membuat operasi &lt;b&gt;CRUD&lt;/b&gt; pada aplikasi atau web. Dikarenakan di tutorial kali ini ada istilah database yang belum tentu teman-teman tau, ada baiknya teman-teman membaca tutorial sebelumnya mengenai &lt;a href=&quot;&quot;&gt;Istilah dasar pada database&lt;/a&gt; dan barangkali disini ada yang belum tau bagaimana cara menggunakan SQL dan melakukan operasi &lt;b&gt;CREATE&lt;/b&gt; bisa membaca &lt;a href=&quot;&quot;&gt;Cara belajar mengunakan MySQL dan membuat Database beserta tabelnya&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;b class=&quot;none&quot;&gt;Sebelumnya, silahkan masukan perintah Query dibawah ini ke terminal/cmd untuk bahan praktek.&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;CREATE DATABASE IF NOT EXISTS belajar;
+USE belajar;
+
+DROP TABLE IF EXISTS customers;
+
+CREATE TABLE IF NOT EXISTS customers(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    nama VARCHAR(255) NOT NULL,
+    alamat VARCHAR(255) NOT NULL,
+    kota VARCHAR(255) NOT NULL,
+    negara VARCHAR(255) NOT NULL
+);
+
+
+INSERT INTO customers(nama, alamat, kota, negara) 
+VALUES (&amp;#39;Bagus Mantonafi&amp;#39;, &amp;#39;Jalan Pulau Saelus&amp;#39;, &amp;#39;Denpasar&amp;#39;, &amp;#39;Indonesia&amp;#39;),
+(&amp;#39;Hendry&amp;#39;, &amp;#39;Jalan Watturenggong&amp;#39;, &amp;#39;Denpasar&amp;#39;, &amp;#39;Indonesia&amp;#39;),
+(&amp;#39;John Doe&amp;#39;, &amp;#39;St. sixth nine&amp;#39;, &amp;#39;New York&amp;#39;, &amp;#39;USA&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;1-select&quot;&gt;1. SELECT&lt;/h2&gt;
+
+&lt;h3 id=&quot;untuk-menampilkan-data&quot;&gt;Untuk Menampilkan Data&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;SELECT&lt;/b&gt; berfungsi untuk menampilkan data pada table secara kesuluruhan.&lt;/p&gt;
+
+&lt;h4 id=&quot;syntax-dasar-&quot;&gt;Syntax Dasar :&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;/** Syntax dasar SELECT **/
+SELECT * FROM nama_tabel
+
+/** ATAU **/
+
+/** Syntax dasar SELECT **/
+SELECT nama_field, nama_field, nama_field FROM nama_tabel&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;contoh-penggunaan-&quot;&gt;Contoh Penggunaan :&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;SELECT * FROM customers;
+/** penggunaan tanda * (bintang) artinya digunakan memilih semua field **/
+
+SELECT nama, kota FROM customers;
+/** nama dan kota merupakan sebuah nama_field **/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;2-where&quot;&gt;2. WHERE&lt;/h1&gt;
+
+&lt;h3 id=&quot;untuk-memfilter-datarecord&quot;&gt;Untuk memfilter data/record&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;where&lt;/b&gt; memiliki fungsi untuk memfilter data/record. pengunaan &lt;b&gt;select&lt;/b&gt; dapat menampilkan keseluruhan data, sedangkan dengan menambah perintah &lt;b&gt;where&lt;/b&gt; setelah &lt;b&gt;select&lt;/b&gt; maka data yang ditampilkan dapat difilter/disaring.
+Dengan menggunakan &lt;b&gt;where&lt;/b&gt; teman-teman juga dapat menggunakan beberapa &lt;b&gt;operator&lt;/b&gt; layaknya di bahasa pemograman seperti :&lt;/p&gt;
+
+&lt;ul class=&quot;material&quot;&gt;
+    &lt;li&gt;Operator Sama Dengan &lt;b&gt;=&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Operator Tidak Sama Dengan &lt;b&gt;&amp;lt;&amp;gt;&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Operator Lebih Besar Dari &lt;b&gt;&amp;gt;&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Operator Lebih Kecil Dari &lt;b&gt;&amp;lt;&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Operator Lebih Besar Sama Dengan &lt;b&gt;&amp;gt;=&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Operator Lebih Kecil Sama Dengan &lt;b&gt;&amp;lt;=&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Bedasarkan jangkauan nilai &lt;b&gt;BETWEEN&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Dan untuk memfilter bedasarkan pola huruf yang sama &lt;b&gt;LIKE&lt;/b&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;penting&quot;&gt;
+    &lt;div class=&quot;alert&quot;&gt;
+        &lt;i class=&quot;icon ion-pin&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;notice&quot;&gt;
+    &lt;h4&gt;PENTING : &lt;/h4&gt;
+    &lt;p&gt;Saya menyarankan untuk teman-teman agar tidak menghafalkan operator diatas secara paksa. lebih baik dipraktekan, secara tidak langsung nantinya teman-teman bisa hafal dengan sendirinya&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;syntax-dasar--1&quot;&gt;Syntax Dasar :&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;SELECT * FROM nama_tabel WHERE nama_field = &amp;#39;nilai&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;contoh-penggunaan--1&quot;&gt;Contoh Penggunaan :&lt;/h4&gt;
+
+&lt;p&gt;Menampilkan customers yang memiliki id 1&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;SELECT * FROM customers WHERE id = &amp;#39;1&amp;#39;;
+/** query diatas untuk menampilkan customers yang memiliki id 1 **/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Menampilkan customers yang tidak memiliki nama ‘bagus mantonafi’&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;SELECT * FROM customers WHERE nama &amp;lt;&amp;gt; &amp;#39;Bagus Mantonafi&amp;#39;;
+/** query diatas untuk menampilkan customers yang memiliki nama selain &amp;#39;bagus mantonafi&amp;#39; **/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Menampilkan customers yang bertempat tinggal di kota denpasar&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;SELECT * FROM customers WHERE kota = &amp;#39;Denpasar&amp;#39;;
+/** query diatas untuk menampilkan customers yang bertempat tinggal di kota denpasar **/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Menampilkan customer yang tinggal di negara indonesia&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;SELECT * FROM customers WHERE negara = &amp;#39;Indonesia&amp;#39;;
+/** query diatas untuk menampilkan customer yang tinggal di negara indonesia **/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;3-insert&quot;&gt;3. INSERT&lt;/h1&gt;
+
+&lt;h3 id=&quot;memasukan-datarecord-baru&quot;&gt;Memasukan Data/Record baru&lt;/h3&gt;
+&lt;p&gt;Untuk memasukan atau menambah record/data baru ke table&lt;/p&gt;
+
+&lt;h4 id=&quot;sytax-dasar-&quot;&gt;Sytax Dasar :&lt;/h4&gt;
+
+&lt;p&gt;&lt;b class=&quot;none&quot;&gt;Tanpa mendefiniskan nama field&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;INSERT INTO nama_tabel VALUES(&amp;#39;nilai_masukan&amp;#39;, &amp;#39;nilai_masukan&amp;#39;, &amp;#39;dst&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;b class=&quot;none&quot;&gt;Dengan mendefinisikan nama field&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;INSERT INTO nama_tabel(&amp;#39;nama_field&amp;#39;, &amp;#39;nama_field&amp;#39;, &amp;#39;dst&amp;#39; ) VALUES(&amp;#39;nilai_masukan&amp;#39;, &amp;#39;nilai_masukan&amp;#39;, &amp;#39;dst&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Syntax diatas memang sedikit susah &lt;i&gt;dibaca&lt;/i&gt; karena memang sangat panjang oleh karena itu teman-teman dapat menyederhanakannya dengan menambah baris baru setelah &lt;i&gt;nama tabel&lt;/i&gt; menjadi seperti dibawah ini.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;INSERT INTO nama_tabel(&amp;#39;nama_field&amp;#39;, &amp;#39;nama_field&amp;#39;, &amp;#39;dst&amp;#39; ) 
+VALUES(&amp;#39;nilai_masukan&amp;#39;, &amp;#39;nilai_masukan&amp;#39;, &amp;#39;dst&amp;#39;);
+/** lebih rapi dari yang diatas&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;contoh-penggunaan--2&quot;&gt;Contoh Penggunaan :&lt;/h4&gt;
+&lt;p&gt;Memasukan data berikut ini ke tabel :&lt;/p&gt;
+&lt;table class=&quot;database&quot;&gt;
+    &lt;tr&gt;
+        &lt;td&gt;nama&lt;/td&gt;
+        &lt;td&gt;:&lt;/td&gt;
+        &lt;td&gt;Sholahudin&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;kota&lt;/td&gt;
+        &lt;td&gt;:&lt;/td&gt;
+        &lt;td&gt;Jakarta&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;negara&lt;/td&gt;
+        &lt;td&gt;:&lt;/td&gt;
+        &lt;td&gt;Indonesia&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;b class=&quot;none&quot;&gt;Tanpa mendefiniskan nama field&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;INSERT INTO customers VALUES(&amp;#39;&amp;#39;, &amp;#39;Sholahudin&amp;#39;, &amp;#39;Jakarta&amp;#39;, &amp;#39;Indonesia&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;b class=&quot;none&quot;&gt;Dengan mendefinisikan nama field&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;INSERT INTO customers(&amp;#39;nama&amp;#39;, &amp;#39;kota&amp;#39;, &amp;#39;negara&amp;#39;) 
+VALUES(&amp;#39;Sholahudin&amp;#39;, &amp;#39;Jakarta&amp;#39;, &amp;#39;Indonesia&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;4-update&quot;&gt;4. UPDATE&lt;/h1&gt;
+
+&lt;h3 id=&quot;memperbarui-datarecord&quot;&gt;Memperbarui Data/Record&lt;/h3&gt;
+&lt;p&gt;Memperbarui atau memberbaiki record/data yang sudah ada pada tabel.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;UPDATE customers
+SET nama=&amp;#39;Hendry&amp;#39;
+WHERE id = &amp;#39;4&amp;#39;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Query diatas hanya mengubah nama saja. Query dibawah ini dapat mengubah nama dan kota sekaligus cukup dengan menambahkan &lt;i&gt;nama field&lt;/i&gt; pada &lt;b&gt;SET&lt;/b&gt; saja dan pisahkan dengan koma &lt;b&gt;,&lt;/b&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;UPDATE customers
+SET nama = &amp;#39;Agix&amp;#39;, kota = &amp;#39;Gianyar&amp;#39;
+WHERE name = &amp;#39;Hendry&amp;#39;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div class=&quot;penting&quot;&gt;
+    &lt;div class=&quot;alert&quot;&gt;
+        &lt;i class=&quot;icon ion-pin&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;notice&quot;&gt;
+    &lt;h4&gt;PENTING : &lt;/h4&gt;
+    &lt;p&gt;Setiap mengubah data dengan klausa &lt;b&gt;UPDATE&lt;/b&gt; diharapkan menambah klausa &lt;b&gt;WHERE&lt;/b&gt; di akhir. Tujuannya agar tidak mengubah seluruh record.
+Silahkan mencoba tanpa klausa &lt;b&gt;WHERE&lt;/b&gt; agar tau dampak yang ditimbulkan&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;5-delete&quot;&gt;5. DELETE&lt;/h1&gt;
+
+&lt;h3 id=&quot;menghapus-datarecord&quot;&gt;Menghapus Data/Record&lt;/h3&gt;
+&lt;p&gt;Penggunaan &lt;b&gt;DELETE&lt;/b&gt; digunakan untuk menghapus record pada tabel. baik itu satu data/record atau lebih.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;DELETE FROM customers
+WHERE negara = &amp;#39;USA&amp;#39;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div class=&quot;penting&quot;&gt;
+    &lt;div class=&quot;alert&quot;&gt;
+        &lt;i class=&quot;icon ion-pin&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;notice&quot;&gt;
+    &lt;h4&gt;PENTING : &lt;/h4&gt;
+    &lt;p&gt;Sama halnya klausa &lt;b&gt;UPDATE&lt;/b&gt;, klausa &lt;b&gt;DELETE&lt;/b&gt; juga harus diakhiri dengan &lt;b&gt;WHERE&lt;/b&gt;
+penggunaan klausa &lt;b&gt;DELETE&lt;/b&gt; tanpa &lt;b&gt;WHERE&lt;/b&gt; dapat menyebabkan seluruh record yang telah dimasukan ke tabel terhapus&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;latihan-soal-&quot;&gt;Latihan Soal :&lt;/h2&gt;
+&lt;ol class=&quot;material&quot;&gt;
+    &lt;li&gt;Buatlah database dengan nama &lt;b class=&quot;none&quot;&gt;belajar&lt;/b&gt;?&lt;/li&gt;
+    &lt;li&gt;Di Database belajar buatlah tabel dengan nama &lt;b class=&quot;none&quot;&gt;barang&lt;/b&gt; dengan field &lt;mark&gt;kode_barang&lt;/mark&gt;, &lt;mark&gt;nama_barang&lt;/mark&gt;, &lt;mark&gt;harga_barang&lt;/mark&gt; dan &lt;mark&gt;total_barang&lt;/mark&gt; silahkan tentukan sendiri tipe data dan panjangnya!&lt;/li&gt;
+    &lt;li&gt;Masukan data dibawah ini ke tabel barang tersebut!&lt;/li&gt;
+    &lt;table border=&quot;1px&quot; class=&quot;database&quot;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;td&gt;kode_barang&lt;/td&gt;
+                &lt;td&gt;nama_barang&lt;/td&gt;
+                &lt;td&gt;harga_barang&lt;/td&gt;
+                &lt;td&gt;total_barang&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1234&lt;/td&gt;
+                &lt;td&gt;Laptop ASUS X453MA&lt;/td&gt;
+                &lt;td&gt;4000000&lt;/td&gt;
+                &lt;td&gt;100&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1235&lt;/td&gt;
+                &lt;td&gt;Macbook Air MD2015&lt;/td&gt;
+                &lt;td&gt;14000000&lt;/td&gt;
+                &lt;td&gt;20&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1236&lt;/td&gt;
+                &lt;td&gt;Printer Epson&lt;/td&gt;
+                &lt;td&gt;1000000&lt;/td&gt;
+                &lt;td&gt;40&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1237&lt;/td&gt;
+                &lt;td&gt;Flashdisk Kingston 8GB&lt;/td&gt;
+                &lt;td&gt;80000&lt;/td&gt;
+                &lt;td&gt;80&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1238&lt;/td&gt;
+                &lt;td&gt;Intel Core i5&lt;/td&gt;
+                &lt;td&gt;2200000&lt;/td&gt;
+                &lt;td&gt;10&lt;/td&gt;
+            &lt;/tr&gt;
+                        
+            
+        &lt;/tbody&gt;        
+    &lt;/table&gt;
+    
+    &lt;li&gt;Tampilkan barang dengan &lt;mark&gt;kode_barang&lt;/mark&gt; 1238!&lt;/li&gt;
+    &lt;li&gt;Ubah nama barang tersebut dengan nama &lt;b class=&quot;none&quot;&gt;Intel Core i5 4594&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Ubah nama barang dengan nama &lt;b class=&quot;none&quot;&gt;Flashdisk Kingston 8GB&lt;/b&gt; menjadi &lt;b class=&quot;none&quot;&gt;Kingston 8GB&lt;/b&gt;&lt;/li&gt;
+    &lt;li&gt;Tampilkan barang yang memiliki harga diatas 10 Juta&lt;/li&gt;
+    &lt;li&gt;Hapus barang yang bernama &lt;b class=&quot;none&quot;&gt;Printer Epson&lt;/b&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Nah itulah 5 Query SQL dasar yang harus diketahui sebelum kita mempelajari SQL lebih dalam lagi teman-teman. Penggunaannya sangat penting, Query diatas nantinya dapat dipadukan dengan Query lainnya yang belum kita pelajari seperti INNER JOIN, OUTTER JOIN dll. Jadi lebih baik dimengerti dulu 5 Query diatas sebelum lanjut ke tutorial selanjutnya!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Link Referensi&lt;/strong&gt;
+&lt;br /&gt;
+&lt;a href=&quot;http://w3schools.com/sql/&quot;&gt;W3schools SQL&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&quot;http://w3schools.com/sql/sql_quickref.html&quot;&gt;W3schools SQL Quick Refference&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 04 Mar 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/blog/sql/query-dasar-sql-yang-harus-kamu-ketahui-ketika-belajar-database-dan-soal/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/sql/query-dasar-sql-yang-harus-kamu-ketahui-ketika-belajar-database-dan-soal/</guid>
+        
+        
+        <category>SQL</category>
+        
+      </item>
     
       <item>
         <title>Mudahnya membuat aplikasi Android dan iOS dengan Ionic</title>
@@ -77,8 +358,8 @@
 
 </description>
         <pubDate>Mon, 01 Feb 2016 23:23:40 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/ionic/mudahnya-membuat-aplikasi-android-dan-ios-dengan-ionic/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/ionic/mudahnya-membuat-aplikasi-android-dan-ios-dengan-ionic/</guid>
+        <link>http://localhost:4000/blog/ionic/mudahnya-membuat-aplikasi-android-dan-ios-dengan-ionic/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/ionic/mudahnya-membuat-aplikasi-android-dan-ios-dengan-ionic/</guid>
         
         
         <category>ionic</category>
@@ -95,55 +376,17 @@
 
 &lt;h3 id=&quot;install-node-js-menggunakan-terminal&quot;&gt;Install Node Js menggunakan terminal&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -sL https://deb.nodesource.com/setup_4.x &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sudo -E bash -
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install -y nodejs
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install -y build-essential&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+$ sudo apt-get install -y build-essential&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;em&gt;* Untuk menginstall dengan file tar.gz nanti akan menyusul.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Demikian cara menginstall node js 4.x pada ubuntu 14.04 dan turunannya cara ini dapat diterapkan pada linux yang menggunakan package manager apt-get seperti ubuntu dan turunannya. untuk linux yang lain seperti arch linux, fedora bisa menggunakan package managernya masing-masing caranya ada pada website official.&lt;/p&gt;
 </description>
         <pubDate>Mon, 01 Feb 2016 21:52:00 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/nodejs/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunannya/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/nodejs/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunannya/</guid>
-        
-        
-        <category>NodeJS</category>
-        
-      </item>
-    
-      <item>
-        <title>Perlukah setiap programmer Menginstall NodeJS</title>
-        <description>&lt;p&gt;Jika anda adalah seorang &lt;b&gt;Web Developer&lt;/b&gt; tentu saja anda pernah mendengar nama &lt;b&gt;Node JS&lt;/b&gt;, NodeJS sendiri adalah Javascript Framework Server side yang berguna untuk membuat aplikasi berbasis web secara realtime dengan bahasa pemograman javascript.&lt;/p&gt;
-
-&lt;p&gt;Dulu sekali sangatlah susah untuk Membuat Aplikasi Berbasis Web yang dapat berjalan secara realtime layaknya aplikasi native, namun semenjak adanya NodeJS hal tersebut mulai bisa teratasi. Meskipun bukan pengembang yang menggunakan NodeJS sebagai platformnya atau memang belum berniat mempelajarinya, Menginstall NodeJS pada komputer bagi programmer web sepertinya sudah sangat wajib hukumnya.&lt;/p&gt;
-
-&lt;p&gt;dulu ketika masih mempelajari html dan css saya tidak memerlukan nodejs, tapi setelah banyak ilmu yang saya pelajari mengenai dua bahasa itu saya mulai upgrade ilmu saya dari sebelumnya masih menggunakan css standar kemudian beralih ke scss sebagai css preprosesornya, kemudian dari sebelumnya saya harus kewalahan menduplikasi setiap property CSS3 dengan prefix untuk setiap browser versi lama(-webkit-, -moz-, -o-) untungnya yg seperti itu bisa teratasi dengan yang namanya autoprefix, autoprefix akan membuatkan prefix tersebut secara otomatis dan untuk menggunakannya kita harus menginstall nodejs.&lt;/p&gt;
-
-&lt;p&gt;Bukan cuma &lt;b&gt;CSS&lt;/b&gt; saja, Sekarang untuk Membuat Aplikasi Android Seorang Programmer tidaklah harus mempelajari bahasa java atau harus dalam tingkat mahir Java, Sekarang bisa Membuatnya menggunakan Pemograman Web. jadi buat agan-agan yang bernasib sama seperti saya jago web tapi belum jago JAVA, jangan sia-siakan ilmunya hanya karena pengen cepet-cepet jago bikin aplikasi android secara native dengan java, ilmu webnya dibuang begitu aja, lanjutin aja terus ilmunya klo perlu sampai bisa NodeJS. Nah, Salah satu Framework dan Tools yang digunakan untuk membangun aplikasi android adalah dengan &lt;a href=&quot;&quot;&gt;Phonegap&lt;/a&gt;, &lt;a href=&quot;&quot;&gt;Ionic Framework&lt;/a&gt;, &lt;a href=&quot;&quot;&gt;React Native&lt;/a&gt; dan &lt;a href=&quot;&quot;&gt;NativeScript&lt;/a&gt; selain yang disebutkan masih banyak lagi.&lt;/p&gt;
-
-&lt;p&gt;Jika anda tertarik untuk menginstall NodeJS anda bisa mengikuti instruksi pada link tutorial dibawah ini.&lt;/p&gt;
-&lt;ul class=&quot;list-link&quot;&gt;
-	&lt;li&gt;
-		&lt;a href=&quot;&quot;&gt;
-			Install NodeJS 4.x pada Ubuntu 14.04 thrusty tahr dan turunannya
-		&lt;/a&gt;
-	&lt;/li&gt;
-	&lt;li&gt;
-		&lt;a href=&quot;&quot;&gt;
-			Install NodeJS 4.x pada Windows 7, 8, 10
-		&lt;/a&gt;
-	&lt;/li&gt;
-	&lt;li&gt;Mac OS (Cooming soon)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Selain dari yang saya sebutkan diatas masih banyak lagi yang sangat membantu dari Node JS ini, yang mungkin saya sendiri tidak tau apa saja itu.&lt;/p&gt;
-
-&lt;p&gt;Saya sadar banyak sekali programmer di indonesia yang masih menggunakan cara lama untuk melakukan aktivitas kodingnya, selain itu sering sekali penerapan sebuah teknologi baru di indonesia selalu terlambat dari tren teknologi luar negeri. oleh karena itu kenapa kita nggak mempelajari teknologi yang sedang tren di luar negeri ini.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 02 Jan 2016 22:52:20 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/nodejs/Perlukah-setiap-Programmer-Menginstall-NodeJS/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/nodejs/Perlukah-setiap-Programmer-Menginstall-NodeJS/</guid>
+        <link>http://localhost:4000/blog/nodejs/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunannya/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/nodejs/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunannya/</guid>
         
         
         <category>NodeJS</category>
@@ -158,18 +401,18 @@
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;def print_hi(name)
+  puts &amp;quot;Hi, #{name}&amp;quot;
+end
+print_hi(&amp;#39;Tom&amp;#39;)
+#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 20 Dec 2015 20:09:25 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/jekyll/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/jekyll/welcome-to-jekyll/</guid>
+        <link>http://localhost:4000/blog/jekyll/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/jekyll/welcome-to-jekyll/</guid>
         
         
         <category>jekyll</category>
@@ -181,8 +424,8 @@
         <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum itaque reiciendis, dicta sequi amet veniam alias libero voluptatem eveniet cumque? Adipisci ut dignissimos, provident nemo iste dolores blanditiis ducimus labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta eaque nihil, soluta autem ad, error consequatur veniam illum cumque, cupiditate id. Voluptatum asperiores nihil qui voluptatibus nobis ad, id perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel est sed aperiam adipisci vero, numquam ab dolor saepe. Voluptatibus fuga, eligendi ratione ab consectetur fugiat odit officiis dolore magnam exercitationem.&lt;/p&gt;
 </description>
         <pubDate>Sat, 19 Dec 2015 21:36:58 +0800</pubDate>
-        <link>http://mbahgoez.github.io/blog/introduction/selamat-datang-di-blog-pertamaku-dengan-jekyll/</link>
-        <guid isPermaLink="true">http://mbahgoez.github.io/blog/introduction/selamat-datang-di-blog-pertamaku-dengan-jekyll/</guid>
+        <link>http://localhost:4000/blog/introduction/selamat-datang-di-blog-pertamaku-dengan-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/introduction/selamat-datang-di-blog-pertamaku-dengan-jekyll/</guid>
         
         
         <category>Introduction</category>

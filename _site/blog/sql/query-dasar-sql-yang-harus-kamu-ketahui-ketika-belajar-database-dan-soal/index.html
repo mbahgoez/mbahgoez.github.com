@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <meta name="author" content="Bagus Mantonafi">
+
+
+	    
+      		<title>5 Query SQL Dasar yang harus kamu ketahui ketika belajar Database + Soal Latihan - mbahgoez</title>
+    	
+
+  
+  	<meta name="description" content="beberapa Query dasar SQL. Query dasar ini sangat cukup jika hanya digunakan untuk membuat aplikasi yang dapat melakukan operasi CRUD sederhana. seperti SELEC...">
+  
+
+
+  
+    <meta name="keyword" content="belajar sql, crud dengan sql, belajar mysql, sql dasar, menggunakan mysql, perintah select di mysql, membuat database dengan cmd, belajar database mysql dengan cmd, belajar sql di cmd, belajar database dengan mysql, belajar database di mysql, perintah dasar sql terminal, contoh soal sql dasar, soal sql pemula, mysql untuk pemula"/>
+  
+
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="5 Query SQL Dasar yang harus kamu ketahui ketika belajar Database + Soal Latihan ">
+
+    
+    <meta property="og:image" content="http://localhost:4000/image/code-wallpaper-20.jpg"/>
+    
+
+    
+    <meta property="og:description" content="beberapa Query dasar SQL. Query dasar ini sangat cukup jika hanya digunakan untuk membuat aplikasi yang dapat melakukan operasi CRUD sederhana. seperti SELEC...">
+    
+
+  <meta property="fb:app_id" content="148779352157076">
+
+  <meta property="og:url" content="http://localhost:4000/blog/sql/query-dasar-sql-yang-harus-kamu-ketahui-ketika-belajar-database-dan-soal/">
+  <meta property="og:site_name" content="mbahgoez">
+  <meta property="article:published_time" content="2016-03-04 00:00:00 +0800">
+  <meta property="language" content="Indonesia">
+  <meta property="rating" content="general">
+  <meta name="robots" content="index">
+
+
+
+	<!-- <link rel="stylesheet" href="http://mbahgoez.github.io/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://mbahgoez.github.io/css/ionicons.min.css">
+	<link rel="stylesheet" href="/css/main.css">
+ -->
+
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/ionicons.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+ <link rel="alternate" type="application/rss+xml" title="mbahgoez" href="http://localhost:4000/feed.xml">
+
+  <link rel="canonical" href="http://localhost:4000/blog/sql/query-dasar-sql-yang-harus-kamu-ketahui-ketika-belajar-database-dan-soal/">
+
+
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71770912-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+
+
+  <body>
+
+     <header id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="toggle-menu">
+            <i class="icon ion-navicon">
+              
+            </i>
+          </div>
+          <div class="logo">
+            <a 
+            href="/" 
+            class="text-center">
+            mbahgoez
+            </a>
+          </div>
+        </div>
+      
+      <div class="overlay">
+          </div>
+
+        <div class="col-lg-7 col-lg-push-2 col-md-7 col-md-push-2 col-sm-9">
+          <nav class="menu">
+
+            <div class="btn-close">
+              <i class="icon close ion-close-round">
+              </i>
+            </div>
+
+            <ul>
+            
+              <li>
+                <a href="/">
+                <i class="icon ion-ios-paper-outline "></i>
+                Blog
+                </a>
+              </li>
+              
+              <li>
+                <a href="/comming-soon.html">
+                <i class="icon ion-ios-albums-outline "></i>
+                Portofolio
+                </a>
+              </li>
+              
+              <li>
+                <a href="/comming-soon.html">
+                <i class="icon ion-erlenmeyer-flask"></i>
+                Experiment
+                </a>
+              </li>
+              
+              <li>
+                <a href="/about.html">
+                <i class="icon ion-ios-person-outline"></i>
+                About
+                </a>
+              </li>
+              
+
+
+
+
+<!--               <li>
+                <a href="#">
+                <i class="icon ion-ios-albums-outline"></i>
+                Portofolio
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                <i class="icon ion-erlenmeyer-flask"></i>
+                Experiment
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                <i class="icon ion-ios-person-outline"></i>
+                  About
+                </a>
+              </li> -->
+            </ul>
+
+            <div class="caption">
+                <i class="icon ion-chevron-up"></i>
+
+
+                <span>
+                  Tekan Close (x) Untuk Menutup
+                </span>
+            </div>
+          </nav>
+        </div><!-- col-lg-7 -->
+      </div><!-- row -->
+    </div><!-- container -->
+  </header>
+
+
+        <div class="background-image" id="back" style="display:none">
+	<h3>
+		- By Bagus Mantonafi -
+	</h3>
+</div>
+
+<div class="content" id="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-10 col-lg-push-1">
+				<div class="single">
+					<div class="post-card">
+
+
+
+						<h1>
+							5 Query SQL Dasar yang harus kamu ketahui ketika belajar Database + Soal Latihan
+						</h1>
+
+						
+						
+
+						<img class="img-fit" src="/image/code-wallpaper-20.jpg" alt="">
+
+						
+
+
+						<h4 class="meta-author">
+							<i class="icon ion-calendar"></i>
+								Mar 4, 2016
+							<span>//</span>
+
+
+							
+							<a href="#">
+								Bagus Mantonafi
+							</a>
+							<span>//</span>
+
+							
+
+							SQL
+						</h4>
+
+
+
+						<p>Kali ini saya akan menjelaskan 5 Query SQL dasar yang seharusnya diketahui oleh pemula sebelum belajar SQL lebih dalam lagi. Query berikut ini sendiri query dasar yang cukup sering digunakan utamanya untuk membuat operasi <b>CRUD</b> pada aplikasi atau web. Dikarenakan di tutorial kali ini ada istilah database yang belum tentu teman-teman tau, ada baiknya teman-teman membaca tutorial sebelumnya mengenai <a href="">Istilah dasar pada database</a> dan barangkali disini ada yang belum tau bagaimana cara menggunakan SQL dan melakukan operasi <b>CREATE</b> bisa membaca <a href="">Cara belajar mengunakan MySQL dan membuat Database beserta tabelnya</a>.</p>
+
+<p><b class="none">Sebelumnya, silahkan masukan perintah Query dibawah ini ke terminal/cmd untuk bahan praktek.</b></p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">CREATE DATABASE IF NOT EXISTS belajar;
+USE belajar;
+
+DROP TABLE IF EXISTS customers;
+
+CREATE TABLE IF NOT EXISTS customers(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    nama VARCHAR(255) NOT NULL,
+    alamat VARCHAR(255) NOT NULL,
+    kota VARCHAR(255) NOT NULL,
+    negara VARCHAR(255) NOT NULL
+);
+
+
+INSERT INTO customers(nama, alamat, kota, negara) 
+VALUES (&#39;Bagus Mantonafi&#39;, &#39;Jalan Pulau Saelus&#39;, &#39;Denpasar&#39;, &#39;Indonesia&#39;),
+(&#39;Hendry&#39;, &#39;Jalan Watturenggong&#39;, &#39;Denpasar&#39;, &#39;Indonesia&#39;),
+(&#39;John Doe&#39;, &#39;St. sixth nine&#39;, &#39;New York&#39;, &#39;USA&#39;);</code></pre></figure>
+
+<hr />
+
+<h2 id="1-select">1. SELECT</h2>
+
+<h3 id="untuk-menampilkan-data">Untuk Menampilkan Data</h3>
+<p><b>SELECT</b> berfungsi untuk menampilkan data pada table secara kesuluruhan.</p>
+
+<h4 id="syntax-dasar-">Syntax Dasar :</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">/** Syntax dasar SELECT **/
+SELECT * FROM nama_tabel
+
+/** ATAU **/
+
+/** Syntax dasar SELECT **/
+SELECT nama_field, nama_field, nama_field FROM nama_tabel</code></pre></figure>
+
+<h4 id="contoh-penggunaan-">Contoh Penggunaan :</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">SELECT * FROM customers;
+/** penggunaan tanda * (bintang) artinya digunakan memilih semua field **/
+
+SELECT nama, kota FROM customers;
+/** nama dan kota merupakan sebuah nama_field **/</code></pre></figure>
+
+<hr />
+
+<h1 id="2-where">2. WHERE</h1>
+
+<h3 id="untuk-memfilter-datarecord">Untuk memfilter data/record</h3>
+<p><b>where</b> memiliki fungsi untuk memfilter data/record. pengunaan <b>select</b> dapat menampilkan keseluruhan data, sedangkan dengan menambah perintah <b>where</b> setelah <b>select</b> maka data yang ditampilkan dapat difilter/disaring.
+Dengan menggunakan <b>where</b> teman-teman juga dapat menggunakan beberapa <b>operator</b> layaknya di bahasa pemograman seperti :</p>
+
+<ul class="material">
+    <li>Operator Sama Dengan <b>=</b></li>
+    <li>Operator Tidak Sama Dengan <b>&lt;&gt;</b></li>
+    <li>Operator Lebih Besar Dari <b>&gt;</b></li>
+    <li>Operator Lebih Kecil Dari <b>&lt;</b></li>
+    <li>Operator Lebih Besar Sama Dengan <b>&gt;=</b></li>
+    <li>Operator Lebih Kecil Sama Dengan <b>&lt;=</b></li>
+    <li>Bedasarkan jangkauan nilai <b>BETWEEN</b></li>
+    <li>Dan untuk memfilter bedasarkan pola huruf yang sama <b>LIKE</b></li>
+</ul>
+
+<div class="penting">
+    <div class="alert">
+        <i class="icon ion-pin"></i>
+    </div>
+    <div class="notice">
+    <h4>PENTING : </h4>
+    <p>Saya menyarankan untuk teman-teman agar tidak menghafalkan operator diatas secara paksa. lebih baik dipraktekan, secara tidak langsung nantinya teman-teman bisa hafal dengan sendirinya</p>
+    </div>
+</div>
+
+<h4 id="syntax-dasar--1">Syntax Dasar :</h4>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">SELECT * FROM nama_tabel WHERE nama_field = &#39;nilai&#39;</code></pre></figure>
+
+<h4 id="contoh-penggunaan--1">Contoh Penggunaan :</h4>
+
+<p>Menampilkan customers yang memiliki id 1</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">SELECT * FROM customers WHERE id = &#39;1&#39;;
+/** query diatas untuk menampilkan customers yang memiliki id 1 **/</code></pre></figure>
+
+<p>Menampilkan customers yang tidak memiliki nama ‘bagus mantonafi’</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">SELECT * FROM customers WHERE nama &lt;&gt; &#39;Bagus Mantonafi&#39;;
+/** query diatas untuk menampilkan customers yang memiliki nama selain &#39;bagus mantonafi&#39; **/</code></pre></figure>
+
+<p>Menampilkan customers yang bertempat tinggal di kota denpasar</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">SELECT * FROM customers WHERE kota = &#39;Denpasar&#39;;
+/** query diatas untuk menampilkan customers yang bertempat tinggal di kota denpasar **/</code></pre></figure>
+
+<p>Menampilkan customer yang tinggal di negara indonesia</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">SELECT * FROM customers WHERE negara = &#39;Indonesia&#39;;
+/** query diatas untuk menampilkan customer yang tinggal di negara indonesia **/</code></pre></figure>
+
+<h1 id="3-insert">3. INSERT</h1>
+
+<h3 id="memasukan-datarecord-baru">Memasukan Data/Record baru</h3>
+<p>Untuk memasukan atau menambah record/data baru ke table</p>
+
+<h4 id="sytax-dasar-">Sytax Dasar :</h4>
+
+<p><b class="none">Tanpa mendefiniskan nama field</b></p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">INSERT INTO nama_tabel VALUES(&#39;nilai_masukan&#39;, &#39;nilai_masukan&#39;, &#39;dst&#39;);</code></pre></figure>
+
+<p><b class="none">Dengan mendefinisikan nama field</b></p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">INSERT INTO nama_tabel(&#39;nama_field&#39;, &#39;nama_field&#39;, &#39;dst&#39; ) VALUES(&#39;nilai_masukan&#39;, &#39;nilai_masukan&#39;, &#39;dst&#39;);</code></pre></figure>
+
+<p>Syntax diatas memang sedikit susah <i>dibaca</i> karena memang sangat panjang oleh karena itu teman-teman dapat menyederhanakannya dengan menambah baris baru setelah <i>nama tabel</i> menjadi seperti dibawah ini.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">INSERT INTO nama_tabel(&#39;nama_field&#39;, &#39;nama_field&#39;, &#39;dst&#39; ) 
+VALUES(&#39;nilai_masukan&#39;, &#39;nilai_masukan&#39;, &#39;dst&#39;);
+/** lebih rapi dari yang diatas</code></pre></figure>
+
+<h4 id="contoh-penggunaan--2">Contoh Penggunaan :</h4>
+<p>Memasukan data berikut ini ke tabel :</p>
+<table class="database">
+    <tr>
+        <td>nama</td>
+        <td>:</td>
+        <td>Sholahudin</td>
+    </tr>
+    <tr>
+        <td>kota</td>
+        <td>:</td>
+        <td>Jakarta</td>
+    </tr>
+    <tr>
+        <td>negara</td>
+        <td>:</td>
+        <td>Indonesia</td>
+    </tr>
+</table>
+
+<p><b class="none">Tanpa mendefiniskan nama field</b></p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">INSERT INTO customers VALUES(&#39;&#39;, &#39;Sholahudin&#39;, &#39;Jakarta&#39;, &#39;Indonesia&#39;);</code></pre></figure>
+
+<p><b class="none">Dengan mendefinisikan nama field</b></p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">INSERT INTO customers(&#39;nama&#39;, &#39;kota&#39;, &#39;negara&#39;) 
+VALUES(&#39;Sholahudin&#39;, &#39;Jakarta&#39;, &#39;Indonesia&#39;);</code></pre></figure>
+
+<h1 id="4-update">4. UPDATE</h1>
+
+<h3 id="memperbarui-datarecord">Memperbarui Data/Record</h3>
+<p>Memperbarui atau memberbaiki record/data yang sudah ada pada tabel.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">UPDATE customers
+SET nama=&#39;Hendry&#39;
+WHERE id = &#39;4&#39;;</code></pre></figure>
+
+<p>Query diatas hanya mengubah nama saja. Query dibawah ini dapat mengubah nama dan kota sekaligus cukup dengan menambahkan <i>nama field</i> pada <b>SET</b> saja dan pisahkan dengan koma <b>,</b>.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">UPDATE customers
+SET nama = &#39;Agix&#39;, kota = &#39;Gianyar&#39;
+WHERE name = &#39;Hendry&#39;;</code></pre></figure>
+
+<div class="penting">
+    <div class="alert">
+        <i class="icon ion-pin"></i>
+    </div>
+    <div class="notice">
+    <h4>PENTING : </h4>
+    <p>Setiap mengubah data dengan klausa <b>UPDATE</b> diharapkan menambah klausa <b>WHERE</b> di akhir. Tujuannya agar tidak mengubah seluruh record.
+Silahkan mencoba tanpa klausa <b>WHERE</b> agar tau dampak yang ditimbulkan</p>
+    </div>
+</div>
+
+<h1 id="5-delete">5. DELETE</h1>
+
+<h3 id="menghapus-datarecord">Menghapus Data/Record</h3>
+<p>Penggunaan <b>DELETE</b> digunakan untuk menghapus record pada tabel. baik itu satu data/record atau lebih.</p>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql">DELETE FROM customers
+WHERE negara = &#39;USA&#39;;</code></pre></figure>
+
+<div class="penting">
+    <div class="alert">
+        <i class="icon ion-pin"></i>
+    </div>
+    <div class="notice">
+    <h4>PENTING : </h4>
+    <p>Sama halnya klausa <b>UPDATE</b>, klausa <b>DELETE</b> juga harus diakhiri dengan <b>WHERE</b>
+penggunaan klausa <b>DELETE</b> tanpa <b>WHERE</b> dapat menyebabkan seluruh record yang telah dimasukan ke tabel terhapus</p>
+    </div>
+</div>
+
+<hr />
+
+<h2 id="latihan-soal-">Latihan Soal :</h2>
+<ol class="material">
+    <li>Buatlah database dengan nama <b class="none">belajar</b>?</li>
+    <li>Di Database belajar buatlah tabel dengan nama <b class="none">barang</b> dengan field <mark>kode_barang</mark>, <mark>nama_barang</mark>, <mark>harga_barang</mark> dan <mark>total_barang</mark> silahkan tentukan sendiri tipe data dan panjangnya!</li>
+    <li>Masukan data dibawah ini ke tabel barang tersebut!</li>
+    <table border="1px" class="database">
+        <thead>
+            <tr>
+                <td>kode_barang</td>
+                <td>nama_barang</td>
+                <td>harga_barang</td>
+                <td>total_barang</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1234</td>
+                <td>Laptop ASUS X453MA</td>
+                <td>4000000</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>1235</td>
+                <td>Macbook Air MD2015</td>
+                <td>14000000</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>1236</td>
+                <td>Printer Epson</td>
+                <td>1000000</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>1237</td>
+                <td>Flashdisk Kingston 8GB</td>
+                <td>80000</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>1238</td>
+                <td>Intel Core i5</td>
+                <td>2200000</td>
+                <td>10</td>
+            </tr>
+                        
+            
+        </tbody>        
+    </table>
+    
+    <li>Tampilkan barang dengan <mark>kode_barang</mark> 1238!</li>
+    <li>Ubah nama barang tersebut dengan nama <b class="none">Intel Core i5 4594</b></li>
+    <li>Ubah nama barang dengan nama <b class="none">Flashdisk Kingston 8GB</b> menjadi <b class="none">Kingston 8GB</b></li>
+    <li>Tampilkan barang yang memiliki harga diatas 10 Juta</li>
+    <li>Hapus barang yang bernama <b class="none">Printer Epson</b></li>
+</ol>
+
+<hr />
+
+<p>Nah itulah 5 Query SQL dasar yang harus diketahui sebelum kita mempelajari SQL lebih dalam lagi teman-teman. Penggunaannya sangat penting, Query diatas nantinya dapat dipadukan dengan Query lainnya yang belum kita pelajari seperti INNER JOIN, OUTTER JOIN dll. Jadi lebih baik dimengerti dulu 5 Query diatas sebelum lanjut ke tutorial selanjutnya!</p>
+
+<hr />
+
+<p><strong>Link Referensi</strong>
+<br />
+<a href="http://w3schools.com/sql/">W3schools SQL</a>
+<br />
+<a href="http://w3schools.com/sql/sql_quickref.html">W3schools SQL Quick Refference</a></p>
+
+
+
+
+					<div class="division">
+
+						 <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+
+
+
+						<a href="https://twitter.com/share"
+							class="twitter-share-button"{count}>
+						</a>
+
+						<script>
+						!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+						</script>
+
+
+						<!--
+						<div
+						  class="fb-like"
+						  data-share="true"
+						  data-width="450"
+						  data-show-faces="true">
+						</div>
+
+
+						<script>
+  						window.fbAsyncInit = function() {
+						    FB.init({
+						      appId      : '148779352157076',
+						      xfbml      : true,
+						      version    : 'v2.5'
+						    });
+						  };
+
+						  (function(d, s, id){
+						     var js, fjs = d.getElementsByTagName(s)[0];
+						     if (d.getElementById(id)) {return;}
+						     js = d.createElement(s); js.id = id;
+						     js.src = "//connect.facebook.net/en_US/sdk.js";
+						     fjs.parentNode.insertBefore(js, fjs);
+						   }(document, 'script', 'facebook-jssdk'));
+
+
+							FB.ui(
+							  {
+							    method: 'share',
+							    href: 'https://developers.facebook.com/docs/',
+							  },
+							  // callback
+							  function(response) {
+							    if (response && !response.error_message) {
+							      alert('Posting completed.');
+							    } else {
+							      alert('Error while posting.');
+							    }
+							  }
+							);
+
+						</script>
+
+ -->
+
+
+						</div>
+						<hr class="sekat-komentar">
+
+
+						<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//mbahgoez.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+					</div><!-- post-card -->
+				</div><!--single -->
+			</div><!-- col-8 -->
+		</div>
+
+
+		<div class="row">
+			<div class="col-lg-10 col-lg-push-1">
+			<div class="division">
+				<div class="tags">
+	<h1>
+		<i class="icon ion-pin"></i>
+		Tags
+	</h1>
+
+	<div class="tagged">
+		<ul>
+			
+            <li>
+                <a href="/blog/Introduction">
+                	Introduction
+           <!--      	<span class="badge">
+                    	2
+                	</span> -->
+            	</a>
+            </li>
+            
+            <li>
+                <a href="/blog/jekyll">
+                	jekyll
+           <!--      	<span class="badge">
+                    	2
+                	</span> -->
+            	</a>
+            </li>
+            
+            <li>
+                <a href="/blog/NodeJS">
+                	NodeJS
+           <!--      	<span class="badge">
+                    	2
+                	</span> -->
+            	</a>
+            </li>
+            
+            <li>
+                <a href="/blog/ionic">
+                	ionic
+           <!--      	<span class="badge">
+                    	2
+                	</span> -->
+            	</a>
+            </li>
+            
+            <li>
+                <a href="/blog/SQL">
+                	SQL
+           <!--      	<span class="badge">
+                    	2
+                	</span> -->
+            	</a>
+            </li>
+            
+		</ul>
+	</div><!-- tagged -->
+</div><!-- tags -->
+
+			</div>
+
+
+				<div class="categories">
+					<h1>
+						<i class="icon ion-ios-paper-outline"></i>
+						Categories
+					</h1>
+
+					<ul>
+						<li>
+							<a href="#">
+								Linux
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								NodeJS
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								Ionic
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								AngularJS
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								MonggoDB
+							</a>
+						</li>
+					</ul>
+				</div><!-- categories -->
+
+				<div class="division">
+					<div class="related">
+	<h1>
+		<i class="icon ion-ios-paper-outline"></i>
+		Related Post
+	</h1>
+
+	<div class="list">
+		<ul>
+		  
+		    <li>
+		      <a href="/blog/ionic/mudahnya-membuat-aplikasi-android-dan-ios-dengan-ionic/"> Mudahnya membuat aplikasi Android dan iOS dengan Ionic</a>
+		      <time>February 1, 2016</time>
+		    </li>
+		  
+		    <li>
+		      <a href="/blog/nodejs/cara-menginstall-nodejs-4.x-pada-ubuntu-14.04-dan-turunannya/"> Cara menginstall Node JS Versi 4.x pada Ubuntu 14.04 LTS dan turunannya</a>
+		      <time>February 1, 2016</time>
+		    </li>
+		  
+		    <li>
+		      <a href="/blog/jekyll/welcome-to-jekyll/"> Welcome to Jekyll!</a>
+		      <time>December 20, 2015</time>
+		    </li>
+		  
+		</ul>
+	</div>
+</div>
+				</div>
+			</div><!-- col -4 -->
+		</div><!-- row -->
+	</div><!-- container -->
+</div><!-- content -->
+
+
+
+
+
+
+
+
+    <div class="container social" id="footer">  
+<hr class="footer">
+  <div class="row">
+    <div class="col-lg-8 col-lg-push-2">
+      <h3 class="text-center copyright">
+        Copyright &copy; 2018. mbahgoez All rights reserved
+      </h3>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="toTop">
+  <i class="icon ion-chevron-up"></i>
+</div>
+
+
+
+    <script>
+      window.___gcfg = {
+        lang: 'en-US',
+        parsetags: 'onload'
+      };
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+
+</html>

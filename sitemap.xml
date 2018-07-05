@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: null
 sitemap:
   exclude: 'yes'
@@ -84,4 +84,4 @@ sitemap:
       {% endfor %}
     {% endif %}
   {% endfor %}
-</urlset>
+</urlset> -->
