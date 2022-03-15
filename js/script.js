@@ -1,3 +1,5 @@
+location.href = "https://gusmantap.com/development/5-query-sql-dasar-yang-harus-kamu-ketahui-ketika-belajar-database-soal-latihan/";
+
 $(document).ready(function(){
 
 
